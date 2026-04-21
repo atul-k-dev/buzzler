@@ -13,15 +13,15 @@ export default function Home() {
       <Navbar />
       
       <main>
-        <HeroSection />
-        <ServicesSection />
-        <ProcessSection />
-        <WhyUsSection />
-        <TestimonialsSection />
-        <FAQSection />
+        <div id="hero"><HeroSection /></div>
+        <div id="services"><ServicesSection /></div>
+        <div id="process"><ProcessSection /></div>
+        <div id="why-us"><WhyUsSection /></div>
+        <div id="clients"><TestimonialsSection /></div>
+        <div id="faq"><FAQSection /></div>
       </main>
       
-      <Footer />
+      <div id="contact"><Footer /></div>
     </div>
   );
 }
