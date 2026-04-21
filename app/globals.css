@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@theme {
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-ring: var(--ring);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+
+  --surface: #d4d4d4;
+  --surface-foreground: #1b1b1b;
+
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+
+  --border: #adadad;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+
+  --accent: #fe626a;
+  --ring: #000000;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #fafafa;
+
+  --surface: #1d1d1d;
+  --surface-foreground: #fafafa;
+
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+
+  --border: #27272a;
+  --muted: #1f1f22;
+  --muted-foreground: #a1a1aa;
+
+  --accent: #3b82f6;
+  --ring: #ffffff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+}
+
+@keyframes scan {
+  from {
+    top: 0;
+  }
+
+  to {
+    top: 100%;
+  }
+}
