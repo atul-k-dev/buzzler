@@ -93,7 +93,7 @@ const HeroSection = () => {
         <div className="absolute inset-x-0 bottom-0 h-48 sm:h-64 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full -mt-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="flex flex-col items-center text-center">
 
           {/* Badge */}
@@ -112,7 +112,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease, delay: 0.22 }}
-            className="text-[3.5rem] sm:text-6xl md:text-7xl lg:text-[6rem] font-semibold tracking-tight text-[var(--hero-text-primary)] leading-[1.05] mb-6 max-w-4xl custom-headline transition-colors duration-500"
+            className="text-[3.2rem] text-left sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-semibold tracking-tight text-[var(--hero-text-primary)] leading-[1.05] mb-6 max-w-4xl custom-headline transition-colors duration-500"
           >
             Build Software<br />That Actually Works
           </motion.h1>
@@ -122,7 +122,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease, delay: 0.36 }}
-            className="text-lg sm:text-lg text-[var(--hero-text-secondary)] mb-10 max-w-2xl font-light transition-colors duration-500"
+            className="text-lg text-left sm:text-center sm:text-lg text-[var(--hero-text-secondary)] mb-10 max-w-2xl font-light transition-colors duration-500"
           >
             We design and build custom web, mobile, and AI-powered applications for startups and growing businesses.
           </motion.p>
@@ -134,10 +134,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease, delay: 0.48 }}
             className="flex flex-row gap-4 items-center justify-center"
           >
-            <button className="h-13 px-8 rounded-full border border-black/5 dark:border-white/10 bg-slate-100 dark:bg-[#160B21] hover:bg-slate-200 dark:hover:bg-[#1C0E2B] text-slate-900 dark:text-white font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+            <button className="h-13 px-6 sm:px-8 rounded-full border border-black/5 dark:border-white/10 bg-slate-100 dark:bg-[#160B21] hover:bg-slate-200 dark:hover:bg-[#1C0E2B] text-slate-900 dark:text-white font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50">
               Our Services
             </button>
-            <button className="relative h-13 px-8 rounded-full text-white dark:text-black bg-slate-900 dark:bg-white/80 hover:bg-black dark:hover:bg-white font-semibold text-base transition-all overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+            <button className="relative h-13 px-6 sm:px-8 rounded-full text-white dark:text-black bg-slate-900 dark:bg-white/80 hover:bg-black dark:hover:bg-white font-semibold text-base transition-all overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500/50">
               Start a Project
             </button>
           </motion.div>
@@ -149,13 +149,13 @@ const HeroSection = () => {
             transition={{ duration: 0.7, ease, delay: 0.65 }}
             className="mt-32 flex flex-col items-center"
           >
-            <p className="text-[10px] sm:text-xs uppercase tracking-widest text-foreground mb-8 font-medium transition-colors duration-500">
-              Backed by founders and businesses worldwide:
+            <p className=" px-14 lg:px-0 text-xs uppercase tracking-widest text-foreground mb-8 font-medium transition-colors duration-500">
+              Backed by founders and  businesses worldwide:
             </p>
-            <div className="flex flex-wrap bg-white/90 p-2 rounded-full px-5 justify-center gap-8 md:gap-7 items-center transition-all duration-700">
-              <img src="/img/Clogo/1.jpg" alt="" width={100} height={100} className="border-r pr-7 border-border" />
-              <img src="/img/Clogo/2.png" alt="" width={100} height={100} className="border-r pr-7 border-border" />
-              <img src="/img/Clogo/3.png" alt="" width={100} height={100} className=" " />
+            <div className="flex flex-wrap bg-white/90 p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
+              <img src="/img/Clogo/1.jpg" alt="" className=" lg:w-30 w-20 lg:border-r lg:pr-7 border-border" />
+              <img src="/img/Clogo/2.png" alt=""  className="lg:w-30 w-20  lg:border-r lg:pr-7 border-border" />
+              <img src="/img/Clogo/3.png" alt=""  className="lg:w-30 w-20  " />
             </div>
           </motion.div>
 

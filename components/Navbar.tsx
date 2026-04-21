@@ -86,10 +86,10 @@ const Navbar = () => {
       <motion.nav
         animate={{ y: visible ? 0 : -120, opacity: visible ? 1 : 0 }}
         transition={{ duration: 0.4, ease }}
-        className="fixed top-0 left-0 right-0 z-50 py-4 px-4 sm:px-6 lg:px-8"
+        className="fixed top-0 left-0 right-0 z-50 py-4 px-2 sm:px-6 lg:px-8"
       >
         <div
-          className={`max-w-6xl mx-auto flex items-center backdrop-blur-md justify-between h-14 px-2 sm:px-6 rounded-full transition-all duration-300 border ${atTop
+          className={`max-w-6xl mx-auto flex items-center backdrop-blur-md justify-between h-14 px-3 sm:px-6 rounded-full transition-all duration-300 border ${atTop
             ? 'bg-transparent border-transparent '
             : 'bg-surface/60  border-border/50'
             }`}

@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
 
         {/* CTA Section */}
-        <div ref={ctaRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-32">
+        <div ref={ctaRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12 lg:mb-32">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={ctaInView ? { opacity: 1, x: 0 } : {}}
@@ -60,7 +60,7 @@ const Footer = () => {
             initial={{ opacity: 0, scale: 0.9, x: 30 }}
             animate={ctaInView ? { opacity: 1, scale: 1, x: 0 } : {}}
             transition={{ duration: 0.75, ease, delay: 0.15 }}
-            className="flex justify-start lg:justify-end"
+            className="lg:flex justify-start lg:justify-end hidden"
           >
             <div className="relative w-64 h-64 md:w-80 md:h-80 bg-surface rounded-xl border border-border flex items-center justify-center overflow-hidden shadow-[0_0_50px_rgba(173,255,0,0.05)] group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#fb5258]/10 to-transparent opacity-50" />
@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
 
         {/* Navigation Links Section */}
-        <div ref={navRef} className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-8 mb-24">
+        <div ref={navRef} className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8 gap-x-8 mb-24">
 
           {/* Email / Phone Column */}
           <motion.div
@@ -82,7 +82,7 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
             className="col-span-2 lg:col-span-2"
           >
-            <div className="mb-8">
+            <div className="mb-4">
               <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Email</span>
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground mt-2 cursor-pointer hover:opacity-80 transition-opacity">
                 hello@buzzler.com
