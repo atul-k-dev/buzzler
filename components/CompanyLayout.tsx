@@ -33,7 +33,7 @@ export default function CompanyLayout({
 
       {/* ── Top nav bar ── */}
       <header className="fixed top-0 left-0 right-0 z-50 py-4 px-4 sm:px-8">
-        <div className="max-w-6xl mx-auto flex items-center justify-between h-14 px-4 sm:px-6 rounded-full bg-background border border-border">
+        <div className="max-w-6xl mx-auto flex items-center justify-between h-14 px-4 sm:px-6 rounded-full bg-background/80 backdrop-blur-sm border border-border/80">
           {/* Back home */}
           <Link
             href="/"

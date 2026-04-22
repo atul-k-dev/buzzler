@@ -127,10 +127,10 @@ export default function AboutPage() {
 
           <div className="relative">
             <div className="aspect-square rounded-2xl bg-surface border border-border overflow-hidden flex items-center justify-center">
-              <img src="/logo.png" alt="Buzzler" className="w-40 opacity-60" />
+              <img src="/logo.png" alt="Buzzler" className="w-[70%] opacity-60" />
             </div>
             {/* decorative accent card */}
-            <div className="absolute -bottom-4 -right-4 bg-accent text-black text-xs font-black px-4 py-2 rounded-lg tracking-wide shadow-lg">
+            <div className="absolute -bottom-4 -right-4 bg-accent text-black text-xs font-black px-4 py-2 rounded-full tracking-wide shadow-lg">
               EST. 2023
             </div>
           </div>
