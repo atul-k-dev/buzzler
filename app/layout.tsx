@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import SmoothScroll from "@/components/SmoothScroll";
+
 export const metadata: Metadata = {
   title: "Buzzler Technologies — Software Development Agency",
   description: "Buzzler Technologies builds custom web apps, mobile apps, and AI-powered software for startups and growing businesses. From MVP to full-scale product.",
@@ -36,17 +38,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {/* Global Noise Overlay */}
-          <div 
-            className="fixed inset-0 z-[1] pointer-events-none opacity-[0.25] mix-blend-overlay" 
-            style={{ 
-              backgroundImage: "url('/img/bgEffect.png')", 
-              backgroundRepeat: "repeat",
-              backgroundSize: "200px" 
-            }} 
-          />
-          
-          {children}
+          <SmoothScroll>
+            {/* Global Noise Overlay */}
+            <div 
+              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.25] mix-blend-overlay" 
+              style={{ 
+                backgroundImage: "url('/img/bgEffect.png')", 
+                backgroundRepeat: "repeat",
+                backgroundSize: "200px" 
+              }} 
+            />
+            {children}
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

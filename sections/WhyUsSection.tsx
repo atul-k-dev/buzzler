@@ -51,8 +51,8 @@ const itemVariants = {
 const WhyUsSection = () => {
   const statsRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-  const statsInView = useInView(statsRef, { once: true, amount: 0.2 });
-  const cardsInView = useInView(cardsRef, { once: true, amount: 0.15 });
+  const statsInView = useInView(statsRef, { once: true, amount: 0.15 });
+  const cardsInView = useInView(cardsRef, { once: true, amount: 0.1 });
 
   return (
     <section className="py-24 relative">

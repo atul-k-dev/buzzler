@@ -12,22 +12,22 @@ const HeroSection = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         :root {
-          --hero-bg: #ffffffff;
-          --hero-glow-color: rgba(134, 94, 255, 0.4);
-          --hero-glow-color-solid: rgba(134, 94, 255, 0.28);
-          --hero-line-color: rgba(168, 85, 247, 0.1);
-          --hero-line-glow: rgba(169, 85, 247, 0.32);
+         --hero-bg: #ffd7d4ff;
+          --hero-glow-color: rgba(255, 58, 104, 0.1);
+          --hero-glow-color-solid: rgba(255, 58, 104, 0.25);
+          --hero-line-color: rgba(255, 58, 104, 0.4);
+          --hero-line-glow: rgba(255, 58, 104, 0.6);
           --hero-curtain-opacity: 0.1;
-          --hero-curtain-color: rgba(97, 58, 255, 0.41);
-          --hero-text-primary: #202020ff;
+          --hero-curtain-color: rgba(255, 255, 255, 0.8);
+          --hero-text-primary: #202020ff; 
           --hero-text-secondary: #222222ff;
         }
         .dark {
-          --hero-bg: #06030F;
-          --hero-glow-color: rgba(99, 58, 255, 0.1);
-          --hero-glow-color-solid: rgba(135, 94, 255, 0.25);
-          --hero-line-color: rgba(168, 85, 247, 0.4);
-          --hero-line-glow: rgba(168, 85, 247, 0.6);
+          --hero-bg: #0f0307ff;
+          --hero-glow-color: rgba(255, 58, 160, 0.1);
+          --hero-glow-color-solid: rgba(255, 94, 132, 0.25);
+          --hero-line-color: rgba(247, 85, 104, 0.4);
+          --hero-line-glow: rgba(247, 85, 174, 0.6);
           --hero-curtain-opacity: 0.6;
           --hero-curtain-color: rgba(0,0,0,0.8);
           --hero-text-primary: rgba(255, 255, 255, 0.9);
@@ -56,8 +56,8 @@ const HeroSection = () => {
           bottom: -20%;
           background: linear-gradient(180deg, transparent 0%, var(--hero-glow-color) 30%, var(--hero-glow-color-solid) 50%, var(--hero-glow-color) 70%, transparent 100%);
           background-size: 100% 200%;
-          animation: drift 25s linear infinite;
-          filter: blur(15px);
+          animation: drift 5s linear infinite;
+          filter: blur(20px);
           z-index: 0;
         }
       `}} />
@@ -134,7 +134,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease, delay: 0.48 }}
             className="flex flex-row gap-4 items-center justify-center"
           >
-            <button className="h-13 px-6 sm:px-8 rounded-full border border-black/5 dark:border-white/10 bg-slate-100 dark:bg-[#160B21] hover:bg-slate-200 dark:hover:bg-[#1C0E2B] text-slate-900 dark:text-white font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+            <button className="h-13 px-6 sm:px-8 rounded-full border border-accent hover:bg-accent text-foreground font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50">
               Our Services
             </button>
             <button className="relative h-13 px-6 sm:px-8 rounded-full text-white dark:text-black bg-slate-900 dark:bg-white/80 hover:bg-black dark:hover:bg-white font-semibold text-base transition-all overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500/50">

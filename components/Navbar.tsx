@@ -89,9 +89,9 @@ const Navbar = () => {
         className="fixed top-0 left-0 right-0 z-50 py-4 px-2 sm:px-6 lg:px-8"
       >
         <div
-          className={`max-w-6xl mx-auto flex items-center backdrop-blur-md justify-between h-14 px-3 sm:px-6 rounded-full transition-all duration-300 border ${atTop
+          className={`max-w-6xl mx-auto flex items-center justify-between h-14 px-3 sm:px-6 sm:pr-5 rounded-full transition-all duration-300 border ${atTop
             ? 'bg-transparent border-transparent '
-            : 'bg-surface/60  border-border/50'
+            : 'bg-background  border-border'
             }`}
         >
           {/* Logo */}
@@ -125,7 +125,7 @@ const Navbar = () => {
               onClick={scrollToContact}
               className="hidden md:flex items-center gap-2 px-5 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-sm rounded-full transition-all shadow-sm"
             >
-              Start a Project
+             Let's Start
             </button>
 
             {/* Mobile hamburger */}

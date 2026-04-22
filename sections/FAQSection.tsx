@@ -42,7 +42,7 @@ const FAQItem = ({
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.5, ease, delay: 0.1 + index * 0.08 }}
     >
       <div
@@ -110,7 +110,7 @@ const FAQSection = () => {
           {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.7, ease }}
             className="lg:col-span-5"
           >

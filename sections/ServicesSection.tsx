@@ -52,7 +52,7 @@ const ServicesSection = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
   const headerInView = useInView(headerRef, { once: true, amount: 0.4 });
-  const gridInView = useInView(gridRef, { once: true, amount: 0.1 });
+  const gridInView = useInView(gridRef, { once: true, amount: 0.05 });
 
   return (
     <section className="py-24 relative">
@@ -79,7 +79,7 @@ const ServicesSection = () => {
         >
           <motion.h2
             initial={{ opacity: 0, x: -30 }}
-            animate={headerInView ? { opacity: 1, x: 0 } : {}}
+            animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.65, ease }}
             className="text-5xl md:text-6xl font-bold text-foreground tracking-tighter leading-tight"
           >
@@ -87,7 +87,7 @@ const ServicesSection = () => {
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, x: 20 }}
-            animate={headerInView ? { opacity: 1, x: 0 } : {}}
+            animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.65, ease, delay: 0.12 }}
             className="text-foreground/60 text-[13px] md:text-sm max-w-sm leading-relaxed font-medium"
           >

@@ -46,7 +46,7 @@ const itemVariants = {
 
 const ProcessSection = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.15 });
+  const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section className="py-24 relative">

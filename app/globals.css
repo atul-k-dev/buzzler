@@ -50,7 +50,7 @@
   --muted: #1f1f22;
   --muted-foreground: #a1a1aa;
 
-  --accent: #fe626a;
+  --accent: #fd707a;
   --ring: #ffffff;
 }
 
@@ -58,6 +58,11 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: "Inter", sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
 }
 
 @keyframes scan {

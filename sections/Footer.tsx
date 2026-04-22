@@ -39,19 +39,24 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
 
         {/* CTA Section */}
-        <div ref={ctaRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12 lg:mb-32">
+        <div ref={ctaRef} className="flex w-full justify-between  gap-12 items-center mb-12 lg:mb-32">
+
+
+
+
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={ctaInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.75, ease }}
+
           >
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-10 leading-[1.1]">
               Ready to build<br />your next product?
             </h2>
-            <button className="group flex items-center bg-[#fb5258] text-black pl-6 pr-2 py-2 rounded-sm font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
+            <button className="group flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
               <span>Start a Project</span>
               <div className="ml-6 bg-black p-2 rounded-md group-hover:rotate-45 transition-transform duration-300">
-                <ArrowUpRight className="w-5 h-5 text-[#fb5258]" />
+                <ArrowUpRight className="w-5 h-5 text-accent" />
               </div>
             </button>
           </motion.div>
@@ -62,13 +67,14 @@ const Footer = () => {
             transition={{ duration: 0.75, ease, delay: 0.15 }}
             className="lg:flex justify-start lg:justify-end hidden"
           >
-            <div className="relative w-64 h-64 md:w-70 md:h-70 bg-surface rounded-sm border border-border flex items-center justify-center overflow-hidden shadow-[0_0_50px_rgba(173,255,0,0.05)] group">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#fb5258]/10 to-transparent opacity-50" />
-              <img src="/logo.png" alt="logo" width={200} />
-              {/* Scanline Effect */}
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-[#fb5258]/20 animate-[scan_3s_linear_infinite]" />
+            <div className="relative rounded-sm flex items-center justify-center overflow-hidden  group">
+
+              <img src="/logo.png" alt="logo" className='w-60' />
+
+
             </div>
           </motion.div>
+
         </div>
 
         {/* Navigation Links Section */}
@@ -102,9 +108,10 @@ const Footer = () => {
             variants={navColVariants}
             initial="hidden"
             animate={navInView ? 'visible' : 'hidden'}
+            className='w-full lg:text-right'
           >
-            <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Navigation</span>
-            <ul className="mt-6 space-y-4 font-semibold">
+            <span className="text-[10px] tracking-widest text-foreground uppercase   font-mono">/Navigation</span>
+            <ul className="mt-6 space-y-4 font-semibold ">
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Home</a></li>
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Services</a></li>
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Our Work</a></li>
@@ -119,16 +126,17 @@ const Footer = () => {
             variants={navColVariants}
             initial="hidden"
             animate={navInView ? 'visible' : 'hidden'}
+            className='w-full lg:text-right'
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company</span>
-            <ul className="mt-6 space-y-4 font-semibold">
+            <ul className="mt-6 space-y-4 font-semibold ">
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">About Us</a></li>
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Careers</a></li>
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Contact Us</a></li>
             </ul>
             <div className="mt-5">
-              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Legal</span>
-              <ul className="mt-4 space-y-4 font-semibold">
+              <span className="text-[10px] tracking-widest  text-foreground uppercase font-mono">/Legal</span>
+              <ul className="mt-4 space-y-4 font-semibold ">
                 <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Terms of Services</a></li>
                 <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Privacy Policy</a></li>
               </ul>
@@ -141,9 +149,10 @@ const Footer = () => {
             variants={navColVariants}
             initial="hidden"
             animate={navInView ? 'visible' : 'hidden'}
+            className='w-full lg:text-right'
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Follow Us</span>
-            <ul className="mt-6 space-y-4 font-semibold">
+            <ul className="mt-6 space-y-4 font-semibold ">
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">X/Twitter</a></li>
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Instagram</a></li>
               <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Behance</a></li>
@@ -189,7 +198,7 @@ const Footer = () => {
           <h4
             className="text-[15vw] font-black tracking-[10] xl:tracking-tighter leading-none italic uppercase whitespace-nowrap"
             style={{
-              WebkitTextStroke: '2.5px #fa57579d',
+              WebkitTextStroke: '2.5px var(--muted-foreground)',
               color: 'transparent'
             }}
           >
