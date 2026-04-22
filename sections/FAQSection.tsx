@@ -46,7 +46,7 @@ const FAQItem = ({
       transition={{ duration: 0.5, ease, delay: 0.1 + index * 0.08 }}
     >
       <div
-        className={`mb-2 transition-colors duration-300 ${isOpen ? 'bg-surface/80' : 'bg-surface'} hover:bg-surface/80 overflow-hidden cursor-pointer group`}
+        className={`mb-2 transition-all duration-300 ${isOpen ? 'bg-surface/80' : 'bg-surface'} hover:bg-surface/90 overflow-hidden cursor-pointer group active:scale-[0.995]`}
         onClick={onClick}
         style={{
           clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%)'

@@ -92,7 +92,7 @@ const WhyUsSection = () => {
             <motion.div
               key={stat.label}
               variants={itemVariants}
-              className="bg-surface rounded-lg p-6 flex flex-col gap-1 border border-transparent hover:border-border transition-colors duration-300"
+              className="bg-surface rounded-lg p-6 flex flex-col gap-1 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-0.5 active:scale-[0.99] cursor-pointer"
             >
               <span className="text-4xl md:text-5xl font-black tracking-tighter text-foreground">
                 {stat.value}
@@ -118,7 +118,7 @@ const WhyUsSection = () => {
               <motion.div
                 key={reason.title}
                 variants={itemVariants}
-                className="bg-surface relative rounded-lg p-8 group overflow-hidden flex flex-col gap-5 group border border-transparent hover:border-border transition-colors duration-300 cursor-default"
+                className="bg-surface relative rounded-lg p-8 group overflow-hidden flex flex-col gap-5 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99] cursor-pointer"
               >
                 <div className=' absolute top-14 -rotate-20 right-0 scale-[6] opacity-[0.07] group-hover:opacity-[0.3] transition-colors duration-300'><Icon className="w-15 h-15 text-foreground" strokeWidth={2} /></div>
                 <div className="w-10 h-10 bg-foreground/5 border border-border rounded-sm flex items-center justify-center group-hover:bg-foreground/10 transition-colors duration-300">

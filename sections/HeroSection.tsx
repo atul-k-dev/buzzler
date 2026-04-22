@@ -134,10 +134,10 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease, delay: 0.48 }}
             className="flex flex-row gap-4 items-center justify-center"
           >
-            <button className="h-13 px-6 sm:px-8 rounded-full border border-accent hover:bg-accent text-foreground font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+            <button className="h-13 px-6 sm:px-8 rounded-full border border-accent hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
               Our Services
             </button>
-            <button className="relative h-13 px-6 sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent  font-semibold text-base transition-all overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+            <button className="relative h-13 px-6 sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 font-semibold text-base transition-all duration-300 overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
               Start a Project
             </button>
           </motion.div>

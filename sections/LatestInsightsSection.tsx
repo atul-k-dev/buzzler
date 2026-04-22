@@ -61,7 +61,7 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
     initial={{ opacity: 0, y: 36 }}
     animate={gridInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 36 }}
     transition={{ duration: 0.6, ease, delay: i * 0.12 }}
-    className={`group cursor-pointer flex flex-col ${post.featured ? '' : ' '}`}
+    className={`group cursor-pointer flex flex-col transition-all duration-300 hover:-translate-y-1 active:scale-[0.99] ${post.featured ? '' : ' '}`}
   >
     <a href={post.link} target='_blank' rel='noopener noreferrer'>
       {/* Image */}
@@ -142,7 +142,7 @@ const LatestInsightsSection = () => {
     <section
       ref={sectionRef}
       id="blog"
-      className="relative py-20 lg:py-28 bg-background overflow-hidden z-10"
+      className="relative py-20 lg:py-28 bg-background overflow-hidden z-[1]"
     >
       {/* Top Divider */}
       <motion.div

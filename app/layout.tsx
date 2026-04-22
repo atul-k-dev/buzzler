@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 import SmoothScroll from "@/components/SmoothScroll";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Buzzler Technologies — Software Development Agency",
@@ -31,12 +32,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground tracking-tight relative">
-        <ThemeProvider
+      <body className="min-h-full flex flex-col bg-background text-foreground tracking-tight relative" suppressHydrationWarning>
+        <NextThemesProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
+          enableColorScheme={false}
         >
           <SmoothScroll>
             {/* Global Noise Overlay */}
@@ -48,9 +50,10 @@ export default function RootLayout({
                 backgroundSize: "150px" 
               }} 
             />
+            <CustomCursor />
             {children}
           </SmoothScroll>
-        </ThemeProvider>
+        </NextThemesProvider>
       </body>
     </html>
   );

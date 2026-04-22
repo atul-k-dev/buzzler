@@ -25,7 +25,7 @@ export default function Home() {
         <div id="contact" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><GetInTouchSection /></div>
       </main>
 
-      <div className="relative z-20 bg-background" data-scroll><Footer /></div>
+      <div className="relative z-0 bg-background" data-scroll><Footer /></div>
     </div>
   );
 }

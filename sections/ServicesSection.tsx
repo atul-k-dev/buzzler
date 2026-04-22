@@ -139,7 +139,7 @@ const ServicesSection = () => {
 const ServiceCard = ({ service, height }: { service: typeof services[0], height: string }) => {
   return (
     <div
-      className={`bg-surface p-6 rounded-lg overflow-hidden flex flex-col justify-end relative group cursor-pointer transition-transform duration-300 active:scale-[0.98] ${height}`}
+      className={`bg-surface p-6 rounded-lg overflow-hidden flex flex-col justify-end relative group cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${height}`}
     >
       {/* 3D Image Background Overlay */}
       <div className="absolute -top-4 -right-33 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">

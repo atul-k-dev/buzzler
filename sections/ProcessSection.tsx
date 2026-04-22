@@ -86,7 +86,7 @@ const ProcessSection = () => {
             <motion.div
               key={step.number}
               variants={itemVariants}
-              className="bg-surface rounded-lg p-6 flex flex-col justify-between min-h-[280px] group cursor-default relative overflow-hidden border border-transparent hover:border-border transition-colors duration-300"
+              className="bg-surface rounded-lg p-6 flex flex-col justify-between min-h-[280px] group cursor-pointer relative overflow-hidden border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99]"
             >
               {/* Connector arrow on desktop */}
               {idx < steps.length - 1 && (

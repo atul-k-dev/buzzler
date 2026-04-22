@@ -91,13 +91,13 @@ const Navbar = () => {
         <div
           className={`max-w-6xl mx-auto flex items-center justify-between h-14 px-3 pl-4 sm:pl-6 sm:px-6 sm:pr-5 rounded-full transition-all duration-300 border ${atTop
             ? 'bg-transparent border-transparent '
-            : 'bg-background  border-border'
+            : 'bg-background/80 backdrop-blur-sm  border-border/80'
             }`}
         >
           {/* Logo */}
           <button
             onClick={() => handleNavClick('#hero')}
-            className="flex-shrink-0 cursor-pointer text-lg font-bold tracking-tight text-foreground flex items-center gap-2 focus:outline-none"
+            className="flex-shrink-0 cursor-pointer text-lg font-bold tracking-tight text-foreground flex items-center gap-2 focus:outline-none active:scale-95 transition-all"
           >
             <img src="/logo.png" alt="logo" width={20} />
             BUZZLER
@@ -109,7 +109,7 @@ const Navbar = () => {
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-foreground/70 hover:text-foreground transition-colors text-sm font-medium focus:outline-none"
+                className="text-foreground/70 hover:text-foreground transition-all active:scale-95 text-sm font-medium focus:outline-none"
               >
                 {link.label}
               </button>
@@ -123,14 +123,14 @@ const Navbar = () => {
             {/* Desktop CTA */}
             <button
               onClick={scrollToContact}
-              className="hidden md:flex items-center gap-2 px-5 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-sm rounded-full transition-all shadow-sm"
+              className="hidden md:flex items-center gap-2 px-5 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-sm rounded-full transition-all active:scale-95 shadow-sm"
             >
              Let's Start
             </button>
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex items-center justify-center w-13 h-9 rounded-full bg-surface text-foreground focus:outline-none transition-colors hover:bg-surface"
+              className="md:hidden flex items-center justify-center w-13 h-9 rounded-full bg-surface text-foreground focus:outline-none transition-all hover:bg-surface active:scale-90"
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             >

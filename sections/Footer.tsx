@@ -110,10 +110,10 @@ const Footer = () => {
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase   font-mono">/Navigation</span>
             <ul className="mt-6 space-y-4 font-semibold ">
-              <li><Link href="/" className="text-lg text-foreground hover:text-accent transition-colors">Home</Link></li>
-              <li><Link href="/#services" className="text-lg text-foreground hover:text-accent transition-colors">Services</Link></li>
-              <li><Link href="/#why-us" className="text-lg text-foreground hover:text-accent transition-colors">Why Us</Link></li>
-              <li><Link href="/#blog" className="text-lg text-foreground hover:text-accent transition-colors">Our Products</Link></li>
+              <li><Link href="/" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Home</Link></li>
+              <li><Link href="/#services" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Services</Link></li>
+              <li><Link href="/#why-us" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Why Us</Link></li>
+              <li><Link href="/#blog" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Our Products</Link></li>
             </ul>
           </motion.div>
 
@@ -127,9 +127,9 @@ const Footer = () => {
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company</span>
             <ul className="mt-6 space-y-4 font-semibold ">
-              <li><Link href="/about" className="text-lg text-foreground hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link href="/legal/terms" className="text-lg text-foreground hover:text-accent transition-colors">Terms of Services</Link></li>
-              <li><Link href="/legal/privacy" className="text-lg text-foreground hover:text-accent transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/about" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">About Us</Link></li>
+              <li><Link href="/legal/terms" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Terms of Services</Link></li>
+              <li><Link href="/legal/privacy" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Privacy Policy</Link></li>
             </ul>
 
           </motion.div>
@@ -144,10 +144,10 @@ const Footer = () => {
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Follow Us</span>
             <ul className="mt-6 space-y-4 font-semibold ">
-              <li><a href="https://www.youtube.com/channel/UCV7QqrR7dqIcAU4rrQ6T5wA" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">Youtube</a></li>
-              <li><a href="https://www.instagram.com/balert.in/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">Instagram</a></li>
-              <li><a href="https://www.linkedin.com/company/buzzler-technologies/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">LinkedIn</a></li>
-              <li><a href="https://x.com/balert_in" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">X/Twitter</a></li>
+              <li><a href="https://www.youtube.com/channel/UCV7QqrR7dqIcAU4rrQ6T5wA" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Youtube</a></li>
+              <li><a href="https://www.instagram.com/balert.in/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/buzzler-technologies/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">LinkedIn</a></li>
+              <li><a href="https://x.com/balert_in" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">X/Twitter</a></li>
             </ul>
           </motion.div>
         </div>
@@ -171,9 +171,11 @@ const Footer = () => {
 
           <div className="flex items-center gap-2 group cursor-pointer">
             <span className="text-[10px] tracking-widest text-foreground font-mono">MADE BY</span>
-            <span className="text-xs font-bold tracking-tighter flex items-center uppercase gap-1 group-hover:text-[#fa57579d] transition-colors">
-              Atul Kumar <Zap className="w-3 h-3 fill-current" />
-            </span>
+            <a href="https://safepass-vault.vercel.app/" target='_blank' rel='noopener noreferrer'>
+              <span className="text-xs font-bold tracking-tighter flex items-center uppercase gap-1 group-hover:text-[#fa57579d] transition-colors">
+                Atul Kumar <Zap className="w-3 h-3 fill-current" />
+              </span>
+            </a>
           </div>
         </motion.div>
 

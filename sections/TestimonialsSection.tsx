@@ -53,7 +53,7 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
 
 /** Shared testimonial card */
 const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
-  <div className="w-full flex-shrink-0 bg-surface border border-border rounded-2xl p-4 sm:p-6 flex flex-col justify-between group hover:border-white/10 transition-all duration-500 relative">
+  <div className="w-full flex-shrink-0 bg-surface border border-border rounded-2xl p-4 sm:p-6 flex flex-col justify-between group hover:border-foreground/20 active:scale-[0.99] transition-all duration-300 relative cursor-pointer">
     <div className="mb-6">
       <Quote className="w-8 h-8 text-foreground mb-4 fill-foreground" strokeWidth={1} />
       <p className="text-foreground text-sm md:text-lg font-semibold leading-relaxed tracking-tight line-clamp-4">
@@ -95,7 +95,20 @@ const TestimonialsSection = () => {
   );
 
   return (
-    <section className="py-14 lg:pt-14 lg:py-34 overflow-hidden relative xl:max-w-[70%] mx-auto">
+    <section className="py-14 lg:pt-14 lg:py-34 overflow-hidden relative xl:max-w-7xl mx-auto">
+      {/* Top Divider */}
+      <div className="max-w-7xl mx-auto px-6 mb-12">
+        <div className="w-full h-[1px] bg-border relative">
+          <div
+            className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
+            style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
+          />
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">
+            /TESTIMONIALS
+          </span>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         {/* Header Section */}
         <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -103,7 +116,7 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.7, ease }}
-            className="text-5xl md:text-6xl font-bold text-foreground tracking-tighter"
+            className="text-5xl font-semibold text-foreground leading-[1.05]"
           >
             Our Clients
           </motion.h2>
