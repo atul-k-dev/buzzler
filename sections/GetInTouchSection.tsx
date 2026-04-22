@@ -97,7 +97,7 @@ const GetInTouchSection = () => {
                   key={type}
                   type="button"
                   onClick={() => setActiveType(type)}
-                  className={`py-3.5 px-2 rounded-full text-sm font-semibold transition-all active:scale-[0.95] ${activeType === type
+                  className={`py-2.5 px-2 rounded-full text-sm font-semibold transition-all active:scale-[0.95] ${activeType === type
                     ? 'bg-accent text-foreground'
                     : 'bg-muted text-muted-foreground hover:border-accent hover:text-foreground'
                     }`}
