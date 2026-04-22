@@ -153,8 +153,8 @@ const TestimonialsSection = () => {
 
       {/* Mobile Embla Carousel */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={marqueeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        initial={{ opacity: 1, y: 30 }}
+        animate={marqueeInView ? { opacity: 1, y: 0 } : { opacity: 1, y: 30 }}
         transition={{ duration: 0.7, ease, delay: 0.2 }}
         className="lg:hidden px-4 pr-0 sm:pr-4"
       >

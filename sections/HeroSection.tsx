@@ -57,7 +57,7 @@ const HeroSection = () => {
           background: linear-gradient(180deg, transparent 0%, var(--hero-glow-color) 30%, var(--hero-glow-color-solid) 50%, var(--hero-glow-color) 70%, transparent 100%);
           background-size: 100% 200%;
           animation: drift 5s linear infinite;
-          filter: blur(20px);
+          filter: blur(15px);
           z-index: 0;
         }
       `}} />
@@ -101,10 +101,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-black/5 dark:border-white/10 bg-black/[0.03] dark:bg-[#0F081C]/60 backdrop-blur-[4px] mb-8 transition-colors duration-500"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-background/40  mb-8 transition-colors duration-500"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-            <span className="text-xs font-semibold text-slate-600 dark:text-white/80 tracking-wide mt-0.5">Trusted by 50+ startups &amp; businesses</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            <span className="text-xs font-semibold text-foreground tracking-wide mt-0.5">Trusted by 50+ startups &amp; businesses</span>
           </motion.div>
 
           {/* Hero Headline */}

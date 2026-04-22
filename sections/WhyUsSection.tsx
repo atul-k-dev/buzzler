@@ -2,35 +2,35 @@
 
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Zap, Shield, Clock, Code2 } from 'lucide-react';
+import { Zap, Shield, Globe2, Layers } from 'lucide-react';
 
 const stats = [
-  { value: '50+', label: 'Products Shipped' },
-  { value: '4 wks', label: 'Avg MVP Timeline' },
-  { value: '98%', label: 'Client Retention' },
-  { value: '3', label: 'Continents Served' },
+  { value: '2023', label: 'Year Founded' },
+  { value: '11–50', label: 'Team Size' },
+  { value: '100%', label: 'Code Ownership' },
+  { value: '#1', label: 'Mobility & Travel-Tech' },
 ];
 
 const reasons = [
   {
-    icon: Code2,
-    title: 'Full-stack ownership',
-    desc: 'We handle design, development, and deployment. One team, one point of contact, zero handoff chaos.',
+    icon: Layers,
+    title: 'Smart Digital Solutions',
+    desc: 'We build scalable web and mobile applications that simplify real-world experiences — from mobility platforms to intelligent travel-tech ecosystems.',
   },
   {
     icon: Zap,
-    title: 'Built to ship fast',
-    desc: 'We run in focused sprints with a bias toward delivery. MVPs in weeks, not quarters.',
+    title: 'Seamless & Affordable Access',
+    desc: 'Our solutions are built for everyone. Streamlined access, wide availability, and pricing designed for all categories of users and businesses.',
   },
   {
     icon: Shield,
-    title: 'No lock-in',
-    desc: 'You own all the code from day one. Clean, documented, and yours to take anywhere.',
+    title: 'Fortified & Reliable',
+    desc: 'Security is at the core of every product we ship. Robust infrastructure, insightful monitoring, and peace of mind — built in from day one.',
   },
   {
-    icon: Clock,
-    title: 'Transparent timelines',
-    desc: 'Clear scope, honest estimates, and weekly progress updates. You always know where things stand.',
+    icon: Globe2,
+    title: 'Connected Ecosystems',
+    desc: 'We operate at the intersection of mobility, travel-tech, and intelligent platforms — creating seamless connected experiences for users and operators alike.',
   },
 ];
 
@@ -73,10 +73,10 @@ const WhyUsSection = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
           <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tighter leading-tight">
-            Quality software,<br />honest partnership.
+            Streamlined software solutions.
           </h2>
           <p className="text-foreground/60 text-[13px] md:text-sm max-w-sm leading-relaxed font-medium">
-            We&apos;re not the biggest agency. We&apos;re the one that actually cares about your product succeeding.
+            Buzzler is a fast-growing technology company building smart digital solutions that simplify real-world experiences — headquartered in Hyderabad, India.
           </p>
         </div>
 
@@ -118,8 +118,9 @@ const WhyUsSection = () => {
               <motion.div
                 key={reason.title}
                 variants={itemVariants}
-                className="bg-surface rounded-lg p-8 flex flex-col gap-5 group border border-transparent hover:border-border transition-colors duration-300 cursor-default"
+                className="bg-surface relative rounded-lg p-8 group overflow-hidden flex flex-col gap-5 group border border-transparent hover:border-border transition-colors duration-300 cursor-default"
               >
+                <div className=' absolute top-14 -rotate-20 right-0 scale-[6] opacity-[0.07] group-hover:opacity-[0.3] transition-colors duration-300'><Icon className="w-15 h-15 text-foreground" strokeWidth={2} /></div>
                 <div className="w-10 h-10 bg-foreground/5 border border-border rounded-sm flex items-center justify-center group-hover:bg-foreground/10 transition-colors duration-300">
                   <Icon className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />
                 </div>

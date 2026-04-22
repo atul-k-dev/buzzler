@@ -32,8 +32,8 @@ const services = [
   },
   {
     id: 5,
-    title: "AI & ML Integration",
-    desc: "Embed intelligent features into your product — from smart recommendations to automated workflows.",
+    title: "API Integration",
+    desc: "Connect your app with third-party services, payment gateways, and external systems to extend functionality.",
     img: "/img/cardImg/c5.png",
   }
 ];
