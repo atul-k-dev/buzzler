@@ -13,7 +13,7 @@ const navLinks = [
   { label: 'FAQ', href: '#faq' },
 ];
 
-const ease = [0.22, 1, 0.36, 1] as const;
+const ease = [0.4, 0, 0.2, 1] as const;
 
 const Navbar = () => {
   const [visible, setVisible] = useState(true);
@@ -36,10 +36,10 @@ const Navbar = () => {
       // Scroll down → hide (only after scrolling 60px+ from top)
       // Scroll up → show
       if (currentY > 60) {
-        if (diff > 4) {
+        if (diff > 2) {
           setVisible(false);
           setMobileOpen(false); // close mobile menu on hide
-        } else if (diff < -4) {
+        } else if (diff < -2) {
           setVisible(true);
         }
       } else {
@@ -84,12 +84,12 @@ const Navbar = () => {
     <>
       {/* ── Navbar bar ── */}
       <motion.nav
-        animate={{ y: visible ? 0 : -120, opacity: visible ? 1 : 0 }}
-        transition={{ duration: 0.4, ease }}
+        animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
+        transition={{ duration: 0.25, ease }}
         className="fixed top-0 left-0 right-0 z-50 py-4 px-2 sm:px-6 lg:px-8"
       >
         <div
-          className={`max-w-6xl mx-auto flex items-center justify-between h-14 px-3 sm:px-6 sm:pr-5 rounded-full transition-all duration-300 border ${atTop
+          className={`max-w-6xl mx-auto flex items-center justify-between h-14 px-3 pl-4 sm:pl-6 sm:px-6 sm:pr-5 rounded-full transition-all duration-300 border ${atTop
             ? 'bg-transparent border-transparent '
             : 'bg-background  border-border'
             }`}
@@ -117,7 +117,7 @@ const Navbar = () => {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <ThemeToggle />
 
             {/* Desktop CTA */}
@@ -130,7 +130,7 @@ const Navbar = () => {
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex items-center justify-center w-9 h-9 rounded-sm border border-border/50 bg-surface/60 text-foreground focus:outline-none transition-colors hover:bg-surface"
+              className="md:hidden flex items-center justify-center w-13 h-9 rounded-full bg-surface text-foreground focus:outline-none transition-colors hover:bg-surface"
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             >
@@ -173,7 +173,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-40 bg-black/80 backdrop-blur-[4px] md:hidden"
               onClick={() => setMobileOpen(false)}
             />
 
@@ -195,7 +195,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 + 0.05, duration: 0.3, ease }}
                     onClick={() => handleNavClick(link.href)}
-                    className="w-full text-left px-6 py-4 text-foreground/80 hover:text-foreground hover:bg-foreground/5 transition-colors text-base font-medium border-b border-border/40 last:border-b-0 focus:outline-none"
+                    className="w-full text-left px-6 py-4 text-foreground transition-colors text-base font-medium border-b border-border last:border-b-0 focus:outline-none"
                   >
                     {link.label}
                   </motion.button>

@@ -41,11 +41,11 @@ export default function RootLayout({
           <SmoothScroll>
             {/* Global Noise Overlay */}
             <div 
-              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.25] mix-blend-overlay" 
+              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.35] mix-blend-overlay" 
               style={{ 
                 backgroundImage: "url('/img/bgEffect.png')", 
                 backgroundRepeat: "repeat",
-                backgroundSize: "200px" 
+                backgroundSize: "150px" 
               }} 
             />
             {children}

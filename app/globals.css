@@ -65,12 +65,3 @@ html {
   scroll-behavior: smooth;
 }
 
-@keyframes scan {
-  from {
-    top: 0;
-  }
-
-  to {
-    top: 100%;
-  }
-}

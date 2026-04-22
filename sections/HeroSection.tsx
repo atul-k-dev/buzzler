@@ -12,14 +12,14 @@ const HeroSection = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         :root {
-         --hero-bg: #ffd7d4ff;
+         --hero-bg: #ffefedff;
           --hero-glow-color: rgba(255, 58, 104, 0.1);
           --hero-glow-color-solid: rgba(255, 58, 104, 0.25);
           --hero-line-color: rgba(255, 58, 104, 0.4);
           --hero-line-glow: rgba(255, 58, 104, 0.6);
           --hero-curtain-opacity: 0.1;
           --hero-curtain-color: rgba(255, 255, 255, 0.8);
-          --hero-text-primary: #202020ff; 
+          --hero-text-primary: #202020ff;
           --hero-text-secondary: #222222ff;
         }
         .dark {
@@ -55,8 +55,8 @@ const HeroSection = () => {
           top: -20%;
           bottom: -20%;
           background: linear-gradient(180deg, transparent 0%, var(--hero-glow-color) 30%, var(--hero-glow-color-solid) 50%, var(--hero-glow-color) 70%, transparent 100%);
-          background-size: 100% 200%;
-          animation: drift 5s linear infinite;
+          background-size: 150% 250%;
+          animation: drift 1s ease-in-out infinite;
           filter: blur(15px);
           z-index: 0;
         }
@@ -137,7 +137,7 @@ const HeroSection = () => {
             <button className="h-13 px-6 sm:px-8 rounded-full border border-accent hover:bg-accent text-foreground font-semibold text-base transition-all focus:outline-none focus:ring-2 focus:ring-purple-500/50">
               Our Services
             </button>
-            <button className="relative h-13 px-6 sm:px-8 rounded-full text-white dark:text-black bg-slate-900 dark:bg-white/80 hover:bg-black dark:hover:bg-white font-semibold text-base transition-all overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500/50">
+            <button className="relative h-13 px-6 sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent  font-semibold text-base transition-all overflow-hidden group focus:outline-none focus:ring-2 focus:ring-purple-500/50">
               Start a Project
             </button>
           </motion.div>
