@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,6 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { ThemeProvider } from "@/components/theme-provider";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
 
@@ -33,27 +33,26 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col bg-background text-foreground tracking-tight relative" suppressHydrationWarning>
-        <NextThemesProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
-          enableColorScheme={false}
         >
           <SmoothScroll>
             {/* Global Noise Overlay */}
-            <div 
-              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.35] mix-blend-overlay" 
-              style={{ 
-                backgroundImage: "url('/img/bgEffect.png')", 
+            <div
+              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.35] mix-blend-overlay"
+              style={{
+                backgroundImage: "url('/img/bgEffect.png')",
                 backgroundRepeat: "repeat",
-                backgroundSize: "150px" 
-              }} 
+                backgroundSize: "150px"
+              }}
             />
             <CustomCursor />
             {children}
           </SmoothScroll>
-        </NextThemesProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
