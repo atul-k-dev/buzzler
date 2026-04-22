@@ -5,6 +5,7 @@ import ProcessSection from "@/sections/ProcessSection";
 import WhyUsSection from "@/sections/WhyUsSection";
 import TestimonialsSection from "@/sections/TestimonialsSection";
 import FAQSection from "@/sections/FAQSection";
+import LatestInsightsSection from "@/sections/LatestInsightsSection";
 import Footer from "@/sections/Footer";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <div id="process"><ProcessSection /></div>
         <div id="why-us"><WhyUsSection /></div>
         <div id="clients"><TestimonialsSection /></div>
+        <div id="blog"><LatestInsightsSection /></div>
         <div id="faq"><FAQSection /></div>
       </main>
       

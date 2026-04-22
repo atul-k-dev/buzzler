@@ -46,7 +46,7 @@ const HeroSection = () => {
         .bg-line {
           position: absolute;
           top: 0; bottom: 0;
-          width: 1px;
+          width: 0px;
           background: linear-gradient(to bottom, transparent, var(--hero-line-color), transparent);
           box-shadow: 0 0 20px var(--hero-line-glow);
         }
@@ -57,7 +57,7 @@ const HeroSection = () => {
           background: linear-gradient(180deg, transparent 0%, var(--hero-glow-color) 30%, var(--hero-glow-color-solid) 50%, var(--hero-glow-color) 70%, transparent 100%);
           background-size: 100% 200%;
           animation: drift 25s linear infinite;
-          filter: blur(20px);
+          filter: blur(15px);
           z-index: 0;
         }
       `}} />
@@ -154,8 +154,8 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap bg-white/90 p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
               <img src="/img/Clogo/1.jpg" alt="" className=" lg:w-30 w-20 lg:border-r lg:pr-7 border-border" />
-              <img src="/img/Clogo/2.png" alt=""  className="lg:w-30 w-20  lg:border-r lg:pr-7 border-border" />
-              <img src="/img/Clogo/3.png" alt=""  className="lg:w-30 w-20  " />
+              <img src="/img/Clogo/2.png" alt="" className="lg:w-30 w-20  lg:border-r lg:pr-7 border-border" />
+              <img src="/img/Clogo/3.png" alt="" className="lg:w-30 w-20  " />
             </div>
           </motion.div>
 

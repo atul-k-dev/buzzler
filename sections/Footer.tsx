@@ -62,7 +62,7 @@ const Footer = () => {
             transition={{ duration: 0.75, ease, delay: 0.15 }}
             className="lg:flex justify-start lg:justify-end hidden"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 bg-surface rounded-xl border border-border flex items-center justify-center overflow-hidden shadow-[0_0_50px_rgba(173,255,0,0.05)] group">
+            <div className="relative w-64 h-64 md:w-70 md:h-70 bg-surface rounded-sm border border-border flex items-center justify-center overflow-hidden shadow-[0_0_50px_rgba(173,255,0,0.05)] group">
               <div className="absolute inset-0 bg-gradient-to-br from-[#fb5258]/10 to-transparent opacity-50" />
               <img src="/logo.png" alt="logo" width={200} />
               {/* Scanline Effect */}
@@ -104,12 +104,12 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Navigation</span>
-            <ul className="mt-6 space-y-4">
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Services</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Our Work</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Contact</a></li>
+            <ul className="mt-6 space-y-4 font-semibold">
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Home</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Services</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Our Work</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Blog</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Contact</a></li>
             </ul>
           </motion.div>
 
@@ -121,16 +121,16 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company</span>
-            <ul className="mt-6 space-y-4">
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Contact Us</a></li>
+            <ul className="mt-6 space-y-4 font-semibold">
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">About Us</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Careers</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Contact Us</a></li>
             </ul>
-            <div className="mt-10">
+            <div className="mt-5">
               <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Legal</span>
-              <ul className="mt-4 space-y-4">
-                <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Terms of Services</a></li>
-                <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Privacy Policy</a></li>
+              <ul className="mt-4 space-y-4 font-semibold">
+                <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Terms of Services</a></li>
+                <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Privacy Policy</a></li>
               </ul>
             </div>
           </motion.div>
@@ -143,12 +143,12 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Follow Us</span>
-            <ul className="mt-6 space-y-4">
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">X/Twitter</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Instagram</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Behance</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">Telegram</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-white transition-colors">LinkedIn</a></li>
+            <ul className="mt-6 space-y-4 font-semibold">
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">X/Twitter</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Instagram</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Behance</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Telegram</a></li>
+              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">LinkedIn</a></li>
             </ul>
           </motion.div>
         </div>
@@ -184,12 +184,12 @@ const Footer = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={logoInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, ease, delay: 0.1 }}
-          className="mt-14 select-none pointer-events-none flex flex-col items-center overflow-visible"
+          className="mt-5 select-none pointer-events-none flex flex-col items-center overflow-visible"
         >
           <h4
             className="text-[15vw] font-black tracking-[10] xl:tracking-tighter leading-none italic uppercase whitespace-nowrap"
             style={{
-              WebkitTextStroke: '8.5px #fa57579d',
+              WebkitTextStroke: '2.5px #fa57579d',
               color: 'transparent'
             }}
           >

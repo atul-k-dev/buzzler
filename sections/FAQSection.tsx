@@ -46,7 +46,7 @@ const FAQItem = ({
       transition={{ duration: 0.5, ease, delay: 0.1 + index * 0.08 }}
     >
       <div
-        className={`mb-2 transition-colors duration-300 ${isOpen ? 'bg-[#222]' : 'bg-[#1A1A1A]'} hover:bg-[#222] overflow-hidden cursor-pointer group`}
+        className={`mb-2 transition-colors duration-300 ${isOpen ? 'bg-surface/80' : 'bg-surface'} hover:bg-surface/80 overflow-hidden cursor-pointer group`}
         onClick={onClick}
         style={{
           clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%)'
@@ -54,11 +54,11 @@ const FAQItem = ({
       >
         <div className="p-6">
           <div className="flex items-center justify-between">
-            <h3 className="text-white text-lg md:text-xl font-medium pr-10 leading-tight">
+            <h3 className="text-foreground text-lg md:text-xl font-medium pr-10 leading-tight">
               {question}
             </h3>
-            <div className="flex-shrink-0 w-8 h-8 bg-[#2A2A2A] group-hover:bg-[#333] transition-colors rounded-sm flex items-center justify-center">
-              {isOpen ? <Minus size={16} className="text-white" /> : <Plus size={16} className="text-white" />}
+            <div className="flex-shrink-0 w-8 h-8 bg-primary/10 group-hover:bg-primary/20 transition-colors rounded-sm flex items-center justify-center">
+              {isOpen ? <Minus size={16} className="text-foreground" /> : <Plus size={16} className="text-foreground" />}
             </div>
           </div>
 
@@ -70,7 +70,7 @@ const FAQItem = ({
                 exit={{ height: 0, opacity: 0, marginTop: 0 }}
                 transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
               >
-                <p className="text-white/50 text-sm md:text-base leading-relaxed max-w-[90%]">
+                <p className="text-foreground/70 text-sm md:text-base leading-relaxed max-w-[90%]">
                   {answer}
                 </p>
               </motion.div>
