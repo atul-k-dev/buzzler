@@ -188,15 +188,7 @@ const LatestInsightsSection = () => {
           </div>
         </div>
 
-        {/* Mobile "More insights" link */}
-        <div className="mt-10 flex sm:hidden justify-center">
-          <a
-            href="#"
-            className="flex items-center gap-2 border border-border rounded-sm px-5 py-2.5 text-sm font-medium text-foreground hover:border-accent hover:text-accent transition-all duration-300"
-          >
-            More insights <ArrowUpRight className="w-4 h-4" />
-          </a>
-        </div>
+       
       </div>
     </section>
   );

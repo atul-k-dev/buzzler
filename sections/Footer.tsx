@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
+import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight, Plus } from 'lucide-react';
 
@@ -41,9 +42,6 @@ const Footer = () => {
         {/* CTA Section */}
         <div ref={ctaRef} className="flex w-full justify-between  gap-12 items-center mb-12 lg:mb-32">
 
-
-
-
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={ctaInView ? { opacity: 1, x: 0 } : {}}
@@ -53,12 +51,12 @@ const Footer = () => {
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-10 leading-[1.1]">
               Ready to build<br />your next product?
             </h2>
-            <button className="group flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
+            <Link href="/contact" className="group inline-flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
               <span>Start a Project</span>
               <div className="ml-6 bg-black p-2 rounded-md group-hover:rotate-45 transition-transform duration-300">
                 <ArrowUpRight className="w-5 h-5 text-accent" />
               </div>
-            </button>
+            </Link>
           </motion.div>
 
           <motion.div
@@ -89,15 +87,15 @@ const Footer = () => {
             className="col-span-2 lg:col-span-2"
           >
             <div className="mb-4">
-              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Email</span>
+              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Headquarters</span>
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground mt-2 cursor-pointer hover:opacity-80 transition-opacity">
-                hello@buzzler.com
+                Hyderabad
               </h3>
             </div>
             <div>
-              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Phone</span>
+              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company size</span>
               <p className="text-xl md:text-2xl font-medium mt-2">
-                +1 (555) 000-8888
+                11-50 employees
               </p>
             </div>
           </motion.div>
@@ -112,11 +110,10 @@ const Footer = () => {
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase   font-mono">/Navigation</span>
             <ul className="mt-6 space-y-4 font-semibold ">
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Home</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Services</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Our Work</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Blog</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Contact</a></li>
+              <li><Link href="/" className="text-lg text-foreground hover:text-accent transition-colors">Home</Link></li>
+              <li><Link href="/#services" className="text-lg text-foreground hover:text-accent transition-colors">Services</Link></li>
+              <li><Link href="/#why-us" className="text-lg text-foreground hover:text-accent transition-colors">Why Us</Link></li>
+              <li><Link href="/#blog" className="text-lg text-foreground hover:text-accent transition-colors">Our Products</Link></li>
             </ul>
           </motion.div>
 
@@ -130,17 +127,11 @@ const Footer = () => {
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company</span>
             <ul className="mt-6 space-y-4 font-semibold ">
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">About Us</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Careers</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Contact Us</a></li>
+              <li><Link href="/about" className="text-lg text-foreground hover:text-accent transition-colors">About Us</Link></li>
+              <li><Link href="/legal/terms" className="text-lg text-foreground hover:text-accent transition-colors">Terms of Services</Link></li>
+              <li><Link href="/legal/privacy" className="text-lg text-foreground hover:text-accent transition-colors">Privacy Policy</Link></li>
             </ul>
-            <div className="mt-5">
-              <span className="text-[10px] tracking-widest  text-foreground uppercase font-mono">/Legal</span>
-              <ul className="mt-4 space-y-4 font-semibold ">
-                <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Terms of Services</a></li>
-                <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Privacy Policy</a></li>
-              </ul>
-            </div>
+
           </motion.div>
 
           {/* Follow Us Column */}
@@ -153,11 +144,10 @@ const Footer = () => {
           >
             <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Follow Us</span>
             <ul className="mt-6 space-y-4 font-semibold ">
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">X/Twitter</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Instagram</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Behance</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">Telegram</a></li>
-              <li><a href="#" className="text-lg text-foreground hover:text-accent transition-colors">LinkedIn</a></li>
+              <li><a href="https://www.youtube.com/channel/UCV7QqrR7dqIcAU4rrQ6T5wA" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">Youtube</a></li>
+              <li><a href="https://www.instagram.com/balert.in/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/company/buzzler-technologies/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">LinkedIn</a></li>
+              <li><a href="https://x.com/balert_in" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-colors">X/Twitter</a></li>
             </ul>
           </motion.div>
         </div>

@@ -6,6 +6,7 @@ import WhyUsSection from "@/sections/WhyUsSection";
 import TestimonialsSection from "@/sections/TestimonialsSection";
 import FAQSection from "@/sections/FAQSection";
 import LatestInsightsSection from "@/sections/LatestInsightsSection";
+import GetInTouchSection from "@/sections/GetInTouchSection";
 import Footer from "@/sections/Footer";
 
 export default function Home() {
@@ -21,9 +22,10 @@ export default function Home() {
         <div id="blog" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><LatestInsightsSection /></div>
         <div id="clients" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><TestimonialsSection /></div>
         <div id="faq" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><FAQSection /></div>
+        <div id="contact" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><GetInTouchSection /></div>
       </main>
-      
-      <div id="contact" className="relative z-20 bg-background" data-scroll><Footer /></div>
+
+      <div className="relative z-20 bg-background" data-scroll><Footer /></div>
     </div>
   );
 }
