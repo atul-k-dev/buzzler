@@ -56,7 +56,7 @@ const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
   <div className="w-full flex-shrink-0 bg-surface border border-border rounded-2xl p-4 sm:p-6 flex flex-col justify-between group hover:border-foreground/20 active:scale-[0.99] transition-all duration-300 relative cursor-pointer">
     <div className="mb-6">
       <Quote className="w-8 h-8 text-foreground mb-4 fill-foreground" strokeWidth={1} />
-      <p className="text-foreground text-sm md:text-lg font-semibold leading-relaxed  line-clamp-4">
+      <p className="text-foreground text-sm md:text-lg font-medium ">
         &quot;{t.text}&quot;
       </p>
     </div>

@@ -188,7 +188,7 @@ const Footer = () => {
           className="mt-5 select-none pointer-events-none flex flex-col items-center overflow-visible"
         >
           <h4
-            className="text-[15vw] font-black tracking-[10] xl:er leading-none italic uppercase whitespace-nowrap"
+            className="text-[18vw] md:text-[17vw] font-black tracking-[10]  leading-none  uppercase whitespace-nowrap"
             style={{
               WebkitTextStroke: '2.5px var(--muted-foreground)',
               color: 'transparent'
