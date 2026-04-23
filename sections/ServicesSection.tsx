@@ -9,31 +9,31 @@ const services = [
   {
     id: 1,
     title: "Web Development",
-    desc: "High-performance websites and web apps built with modern frameworks, designed to convert visitors into customers.",
+    desc: "Web apps that load in under 2s and turn visitors into paying users — built on React and Next.js.",
     img: "/img/cardImg/c1.png",
   },
   {
     id: 2,
     title: "Mobile App Development",
-    desc: "Cross-platform iOS and Android apps that deliver a seamless, native-quality experience for your users.",
+    desc: "iOS and Android apps built once, deployed everywhere — with performance your users won't notice is cross-platform.",
     img: "/img/cardImg/c2.png",
   },
   {
     id: 3,
     title: "Custom Software",
-    desc: "Tailor-made software solutions built around your exact business processes, from MVPs to full-scale platforms.",
+    desc: "Custom-built tools shaped around your exact workflow — no off-the-shelf bloat, no wasted features.",
     img: "/img/cardImg/c3.png",
   },
   {
     id: 4,
     title: "CRM & Business Tools",
-    desc: "Custom CRM systems and internal business tools that keep your team efficient and your clients happy.",
+    desc: "Internal CRMs and ops tools that replace 3 spreadsheets and an email chain — built for your exact process.",
     img: "/img/cardImg/c4.png",
   },
   {
     id: 5,
     title: "API Integration",
-    desc: "Connect your app with third-party services, payment gateways, and external systems to extend functionality.",
+    desc: "Plug your product into payment gateways, logistics APIs, or any third-party system — without breaking what already works.",
     img: "/img/cardImg/c5.png",
   }
 ];
@@ -67,7 +67,7 @@ const ServicesSection = () => {
         <div className="w-full h-[1px] bg-border relative">
           <div className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }} />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">/WHAT WE BUILD</span>
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">/WHAT WE DELIVER</span>
         </div>
       </motion.div>
 
@@ -81,18 +81,11 @@ const ServicesSection = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.65, ease }}
-            className="text-5xl font-semibold text-foreground leading-[1.05]"
+            className="text-5xl max-w-xl font-semibold text-foreground leading-[1.05]"
           >
-            Digital products,<br />end to end.
+            Everything you need to ship and grow.
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, x: 20 }}
-            animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-            transition={{ duration: 0.65, ease, delay: 0.12 }}
-            className="text-muted-foreground text-md max-w-sm leading-relaxed font-medium"
-          >
-            From idea to launch — we build the web apps, mobile apps, and custom software your business needs to grow.
-          </motion.p>
+          
         </div>
 
         {/* Grid Layout */}
@@ -131,6 +124,7 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </div>
+       
       </div>
     </section>
   );
@@ -154,7 +148,7 @@ const ServiceCard = ({ service, height }: { service: typeof services[0], height:
         <h3 className="text-2xl md:text-[28px] font-bold text-foreground mb-3  leading-[1.1]">
           {service.title}
         </h3>
-        <p className="text-foreground/60 text-sm md:text-[15px] leading-snug max-w-[280px] font-medium">
+        <p className="text-foreground/60 text-sm leading-snug max-w-[280px] font-medium">
           {service.desc}
         </p>
       </div>

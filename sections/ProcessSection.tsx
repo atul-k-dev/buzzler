@@ -7,25 +7,25 @@ const steps = [
   {
     number: '01',
     title: 'Discovery Call',
-    desc: 'We start by understanding your idea, goals, and constraints. No templates — just a focused conversation about what you actually need to build.',
+    desc: 'We ask the hard questions before a single line of code is written. You receive a written product scope summary within 24 hours of our first call.',
     tag: 'Week 1',
   },
   {
     number: '02',
     title: 'Scope & Plan',
-    desc: 'We break the project into clear deliverables, timelines, and milestones. You know exactly what gets built and when.',
+    desc: 'You receive a signed document: features, milestones, timeline, and fixed cost. Nothing starts until you’ve approved every line of it.',
     tag: 'Week 1–2',
   },
   {
     number: '03',
     title: 'Design & Build',
-    desc: 'Our team designs, develops, and tests in iterative sprints. You get regular updates and can give feedback at every stage.',
+    desc: 'Weekly Loom walkthroughs and a live staging link every sprint. You test before we ship — no waiting to see what we built.',
     tag: 'Week 2–8',
   },
   {
     number: '04',
     title: 'Launch & Support',
-    desc: "We deploy your product, monitor performance, and stay available post-launch. Shipping isn't the end — it's the beginning.",
+    desc: '30-day monitoring included as standard. On-call response within 4 business hours. Your product stays live — and we stay responsible for it.',
     tag: 'Ongoing',
   },
 ];
@@ -66,12 +66,14 @@ const ProcessSection = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
-          <h2 className="text-5xl font-semibold text-foreground leading-[1.05]">
-            A process built<br />for clarity.
+          <h2 className="text-5xl font-semibold max-w-xl text-foreground leading-[1.05]">
+            Four steps. You approve everything.
           </h2>
-          <p className="text-muted-foreground text-md max-w-sm leading-relaxed font-medium">
-            Four steps from first conversation to shipped product. No black boxes, no surprises.
+
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+            That's Shape your product to the real life.
           </p>
+
         </div>
 
         {/* Steps Grid */}
@@ -86,7 +88,7 @@ const ProcessSection = () => {
             <motion.div
               key={step.number}
               variants={itemVariants}
-              className="bg-surface rounded-lg p-6 flex flex-col justify-between min-h-[280px] group cursor-pointer relative overflow-hidden border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99]"
+              className="bg-surface rounded-lg p-5 flex-1 flex flex-col justify-between min-h-[280px] group cursor-pointer relative overflow-hidden border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99]"
             >
               {/* Connector arrow on desktop */}
               {idx < steps.length - 1 && (
@@ -98,7 +100,7 @@ const ProcessSection = () => {
               )}
 
               {/* Top row: number + tag */}
-              <div className="flex items-start justify-between mb-8">
+              <div className="flex items-start  justify-between mb-3">
                 <span
                   className="text-[56px] font-black text-black/20  dark:text-white/20 leading-none er select-none transition-colors duration-300"
                   aria-hidden="true"
@@ -112,16 +114,16 @@ const ProcessSection = () => {
 
               {/* Content */}
               <div>
-                <h3 className="text-2xl font-bold text-foreground  mb-3">
+                <h3 className="text-2xl font-bold text-foreground   mb-3">
                   {step.title}
                 </h3>
-                <p className="text-foreground/50 text-sm leading-relaxed">
+                <p className="text-foreground/50 text-sm leading-relaxed line-clamp-4">
                   {step.desc}
                 </p>
               </div>
 
               {/* Bottom accent line */}
-              <div className="mt-6 w-8 h-[2px] bg-foreground/20 group-hover:w-16 group-hover:bg-foreground/50 transition-all duration-500" />
+              <div className="mt-3 w-8 h-[2px] bg-foreground/20 group-hover:w-16 group-hover:bg-foreground/50 transition-all duration-500" />
             </motion.div>
           ))}
         </motion.div>

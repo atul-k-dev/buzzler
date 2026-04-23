@@ -25,9 +25,9 @@ const posts: Post[] = [
     id: 1,
     category: 'BALERT',
     date: '/APR 22, 2025',
-    title: 'Travel Together, Stay Organized',
+    title: 'Balert — Group Travel Planning, Built for Teams',
     excerpt:
-      "Make every group trip seamless and stress-free with Balert's powerful tools for planning, expense management, and collaboration.",
+      "Make every group trip seamless and stress-free with Balert’s powerful tools for planning, expense management, and real-time collaboration.",
     image: '/img/cardImg/build1.webp',
     link: 'https://balert.in/',
     featured: true,
@@ -35,20 +35,20 @@ const posts: Post[] = [
   {
     id: 2,
     category: 'VEDABUX',
-    date: '/APR 22, 2025',
-    title: 'A sacred Farewell to pooja leftovers.',
+    date: '/MAR 10, 2025',
+    title: 'VedaBux — A Spiritual Waste Management Platform',
     excerpt:
-      'VedaBux offers a sacred and eco-friendly way to manage your Pooja Left Over Nirmalayam helping devotees complete their worship with gratitude.',
+      'VedaBux offers a sacred and eco-friendly way to manage Pooja Nirmalayam — helping devotees complete their worship with care and gratitude.',
     image: '/img/cardImg/build2.png',
     link: 'https://vedabux.com/',
   },
   {
     id: 3,
     category: 'GROWBIT',
-    date: '/APR 22, 2025',
-    title: 'Scale Your Business With GrowBit',
+    date: '/FEB 14, 2025',
+    title: 'GrowBit — A B2B Gig Marketplace for Growth Teams',
     excerpt:
-      'Connect with seasoned professionals across the country. From B2B to B2C, startups to enterprises - we are obsessed with scaling your business through our next wave gig marketplace services.',
+      'Connect with seasoned professionals across the country. From B2B to B2C, startups to enterprises — GrowBit helps you scale through the next wave of gig services.',
     image: '/img/cardImg/news3.png',
     link: 'https://growbit.in/',
   },
@@ -110,7 +110,7 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
 
       {/* Read more indicator */}
       <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest  uppercase text-accent opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-1 transition-all duration-300">
-        View Website <ArrowUpRight className="w-3 h-3" />
+        View Live Product <ArrowUpRight className="w-3 h-3" />
       </div>
     </a>
   </motion.article>
@@ -153,12 +153,23 @@ const LatestInsightsSection = () => {
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
           />
           <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">
-            /WHAT WE BUILD
+            /PRODUCTS WE OWN
           </span>
         </div>
       </motion.div>
 
       <div className="max-w-7xl mx-auto px-3 pr-0 sm:pr-4 lg:px-8">
+
+        {/* Section Header */}
+
+        <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
+          <h2 className="text-5xl font-semibold max-w-xl text-foreground leading-[1.05]">
+            We don&apos;t just build for clients.
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+            We build and run our own products.
+          </p>
+        </div>
 
         {/* ── Desktop Grid ──────────────────────── */}
         <div

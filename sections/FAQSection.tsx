@@ -8,24 +8,36 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 const faqData = [
   {
-    question: "What types of projects does Buzzler take on?",
-    answer: "We build custom web apps, mobile apps, and software platforms for startups and SMBs. Whether you need an MVP in four weeks or a full-scale product rebuild, we scope it and ship it."
+    question: "What does this cost?",
+    answer: "Most MVPs fall between ₹3–10L (or $5K–$15K USD) depending on scope. Larger platforms are quoted individually. We give you a fixed price before work begins — no hourly billing, no scope-creep invoices."
   },
   {
-    question: "How long does it take to build a product?",
-    answer: "A focused MVP typically takes 4 to 8 weeks. Larger platforms with complex requirements are scoped individually and usually run 2 to 4 months. We'll give you a clear timeline before we start."
+    question: "What makes Buzzler different from other dev agencies?",
+    answer: "Three things: we own and operate our own live products (Balert, GrowBit, VedaBux), so we think like founders — not just coders. We charge flat rates so your budget is protected. And we include 30 days of post-launch support as standard, not an upsell."
   },
   {
-    question: "Do you work with non-technical founders?",
-    answer: "Absolutely. Most of our clients come to us with a business idea, not a spec sheet. We help you define requirements, plan the product, and handle all the technical execution."
+    question: "What if I need to change scope mid-project?",
+    answer: "Scope changes are documented and priced separately before any work begins on them. Nothing changes without your written sign-off. You are never surprised by a bill."
   },
   {
-    question: "What technologies do you use?",
-    answer: "We primarily work with React, Next.js, Node.js, React Native, and Python. We choose the stack that fits your product best, not the one that's most trendy."
+    question: "Can you build what I'm envisioning?",
+    answer: "If you can describe it, we can scope it. We build web apps, mobile apps, internal tools, and custom platforms — for everything from pre-seed MVPs to established products that need a rebuild."
   },
   {
-    question: "What happens after the product is launched?",
-    answer: "We offer post-launch maintenance and support packages that cover bug fixes, performance monitoring, feature updates, and ongoing improvements as your product grows."
+    question: "How fast can you actually ship?",
+    answer: "A focused MVP: 4–8 weeks. A complex platform: 2–4 months. We scope it before we commit, so you get a real timeline — not an estimate that doubles."
+  },
+  {
+    question: "Do I need to be technical to work with you?",
+    answer: "No. Most of our clients come to us with a business idea and a problem to solve. We handle requirements, architecture, and all execution. You stay focused on your business."
+  },
+  {
+    question: "What's your tech stack?",
+    answer: "React, Next.js, Node.js, React Native, and Python. We recommend the stack that serves your product — not the one that’s trending on Hacker News."
+  },
+  {
+    question: "What does post-launch support look like?",
+    answer: "We offer 30-day included post-launch coverage for bug fixes and monitoring. After that, we offer ongoing retainers at a flat monthly rate. Talk to us about what’s right for your product."
   }
 ];
 
@@ -49,10 +61,10 @@ const FAQItem = ({
         className={`mb-2 transition-all duration-300 ${isOpen ? 'bg-surface/80' : 'bg-surface'} hover:bg-surface/90 overflow-hidden cursor-pointer group active:scale-[0.995]`}
         onClick={onClick}
         style={{
-          clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%)'
+          clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%)'
         }}
       >
-        <div className="p-6">
+        <div className="p-4 lg:p-5">
           <div className="flex items-center justify-between">
             <h3 className="text-foreground text-lg md:text-xl font-medium pr-10 leading-tight">
               {question}
@@ -114,8 +126,8 @@ const FAQSection = () => {
             transition={{ duration: 0.7, ease }}
             className="lg:col-span-5"
           >
-            <h2 className="text-5xl font-semibold text-foreground leading-[1.05]">
-              Frequently <br /> Asked <br /> Questions
+            <h2 className="text-5xl font-semibold  text-foreground leading-[1.05]">
+              Here&apos;s what founders ask us most.
             </h2>
           </motion.div>
 
@@ -133,6 +145,8 @@ const FAQSection = () => {
               />
             ))}
           </div>
+
+            
 
         </div>
       </div>

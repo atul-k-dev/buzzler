@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 
 // next.config.js
 module.exports = {
-  allowedDevOrigins: ['172.24.10.121'],
+  allowedDevOrigins: ['10.123.117.121'],
 }
 
 export default nextConfig;

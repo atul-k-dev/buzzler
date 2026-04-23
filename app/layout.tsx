@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground  relative" suppressHydrationWarning>
         <ThemeProvider
@@ -47,7 +47,7 @@ export default function RootLayout({
           <SmoothScroll>
             {/* Global Noise Overlay */}
             <div
-              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.35] mix-blend-overlay"
+              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.4] mix-blend-overlay"
               style={{
                 backgroundImage: "url('/img/bgEffect.png')",
                 backgroundRepeat: "repeat",

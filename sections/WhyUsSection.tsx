@@ -5,32 +5,32 @@ import { motion, useInView } from 'framer-motion';
 import { Zap, Shield, Globe2, Layers } from 'lucide-react';
 
 const stats = [
-  { value: '2023', label: 'Year Founded' },
-  { value: '11–50', label: 'Team Size' },
-  { value: '100%', label: 'Ownership' },
-  { value: '#1', label: 'Mobility' },
+  { value: '50+', label: 'Products Shipped till now' },
+  { value: '4–8', label: 'week Avg. MVP Timeline' },
+  { value: '30 ', label: 'days Post-Launch Support' },
+  { value: '3 ', label: 'yrs Avg. Client Relationship' },
 ];
 
 const reasons = [
   {
     icon: Layers,
-    title: 'Smart Digital Solutions',
-    desc: 'We build scalable web and mobile applications that simplify real-world experiences — from mobility platforms to intelligent travel-tech ecosystems.',
+    title: 'Architecture that grows with you',
+    desc: 'We architect for growth from day one. When your user base 10x’s, your codebase won’t need a rewrite.',
   },
   {
     icon: Zap,
-    title: 'Seamless & Affordable Access',
-    desc: 'Our solutions are built for everyone. Streamlined access, wide availability, and pricing designed for all categories of users and businesses.',
+    title: 'Transparent Pricing. No Surprises.',
+    desc: 'Flat-rate project pricing with clear milestones. You know the cost before you commit.',
   },
   {
     icon: Shield,
-    title: 'Fortified & Reliable',
-    desc: 'Security is at the core of every product we ship. Robust infrastructure, insightful monitoring, and peace of mind — built in from day one.',
+    title: 'Security Baked In, Not Bolted On',
+    desc: 'Auth, encryption, and infrastructure hardening are part of our default build — not an add-on.',
   },
   {
     icon: Globe2,
-    title: 'Connected Ecosystems',
-    desc: 'We operate at the intersection of mobility, travel-tech, and intelligent platforms — creating seamless connected experiences for users and operators alike.',
+    title: 'One Team, Full Stack',
+    desc: 'Design, frontend, backend, DevOps. You deal with one team, one point of contact, zero hand-off gaps.',
   },
 ];
 
@@ -72,12 +72,13 @@ const WhyUsSection = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
-          <h2 className="text-5xl font-semibold text-foreground leading-[1.05]">
-            Streamlined software solutions.
+          <h2 className="text-5xl font-semibold max-w-xl text-foreground leading-[1.05]">
+            We&apos;ve shipped 50+ products.
           </h2>
-          <p className="text-muted-foreground text-md max-w-sm leading-relaxed font-medium">
-            Buzzler is a fast-growing technology company building smart digital solutions that simplify real-world experiences — headquartered in Hyderabad, India.
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+            We know what makes them fail.
           </p>
+          
         </div>
 
         {/* Stats Row */}

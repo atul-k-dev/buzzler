@@ -13,37 +13,37 @@ const testimonials = [
   {
     name: "Benjamin Daul",
     role: "Head of Engineering",
-    text: "Buzzler built our internal dashboard in three weeks. It's clean, fast, and exactly what we needed — no unnecessary complexity.",
+    text: "Buzzler built our internal ops dashboard in 3 weeks. It replaced a 5-tab spreadsheet our team hated. Clean, fast, and exactly scoped. Really good service.",
     avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&q=80",
   },
   {
     name: "Jesse Leigh",
     role: "CEO & Founder",
-    text: "We came with a rough idea and left with a fully working mobile app. The team was quick, communicative, and delivered beyond expectations.",
+    text: "We had a Notion doc and a rough sketch. Buzzler turned it into a production-ready mobile app in 6 weeks. They scoped it correctly, hit every milestone, and we had users on day one.",
     avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&q=80",
   },
   {
     name: "Amy Louise",
     role: "Customer Success Lead",
-    text: "Our custom CRM completely changed how we manage clients. The Buzzler team understood our workflow better than we did.",
+    text: "Our custom CRM completely changed how we manage clients. The Buzzler team understood our workflow better than we did — and built exactly what we needed, not what we asked for.",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80",
   },
   {
     name: "David Chen",
     role: "Co-Founder & CTO",
-    text: "We needed a reliable dev partner to ship fast without cutting corners. Buzzler delivered a scalable web platform on time and on budget.",
+    text: "We needed a dev partner who could ship fast without cutting corners. Buzzler delivered a scalable web platform on time, on budget, and with zero scope creep.",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80",
   },
   {
     name: "Sarah Miller",
     role: "Product Director",
-    text: "From wireframe to production in six weeks. The attention to detail in both the UI and the backend performance was impressive.",
+    text: "From wireframe to production in six weeks. I’d been burned before by agencies who disappeared after launch. Buzzler had a team on standby for 30 days. That’s not normal, and it made all the difference.",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&q=80",
   },
   {
     name: "Robert Fox",
     role: "Startup Founder",
-    text: "They didn't just write code — they asked the right questions, challenged bad assumptions, and helped us build the right product.",
+    text: "They didn’t just write code — they asked the right questions, challenged bad assumptions, and helped us build the right product. That’s rare in a dev shop.",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&q=80",
   }
 ];
@@ -53,15 +53,15 @@ const duplicatedTestimonials = [...testimonials, ...testimonials];
 
 /** Shared testimonial card */
 const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
-  <div className="w-full flex-shrink-0 bg-surface border border-border rounded-2xl p-4 sm:p-6 flex flex-col justify-between group hover:border-foreground/20 active:scale-[0.99] transition-all duration-300 relative cursor-pointer">
+  <div className="w-full flex-shrink-0 bg-surface  border border-border rounded-2xl p-4 sm:p-6 flex flex-col justify-between group hover:border-foreground/20 active:scale-[0.99] transition-all duration-300 relative cursor-pointer">
     <div className="mb-6">
       <Quote className="w-8 h-8 text-foreground mb-4 fill-foreground" strokeWidth={1} />
-      <p className="text-foreground text-sm md:text-lg font-medium ">
+      <p className="text-foreground text-sm md:text-lg font-medium line-clamp-4">
         &quot;{t.text}&quot;
       </p>
     </div>
 
-    <div className="flex items-center justify-between mt-auto">
+    <div className="flex items-center mt-auto ">
       <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-full overflow-hidden border border-white/10 bg-white/5">
           <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
@@ -70,10 +70,6 @@ const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
           <h5 className="text-foreground font-bold text-sm ">{t.name}</h5>
           <p className="text-foreground/40 text-[11px] font-medium uppercase tracking-wider">{t.role}</p>
         </div>
-      </div>
-
-      <div className="w-8 h-8 bg-primary border border-border rounded-sm flex items-center justify-center group-hover:border-white/20 transition-colors">
-        <XIcon className="w-3.5 h-3.5 text-primary-foreground" />
       </div>
     </div>
   </div>
@@ -111,24 +107,18 @@ const TestimonialsSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 lg:px-8 mb-16">
         {/* Header Section */}
-        <div ref={headerRef} className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <motion.h2
-            initial={{ opacity: 0, x: -40 }}
-            animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
-            transition={{ duration: 0.7, ease }}
-            className="text-5xl font-semibold text-foreground leading-[1.05]"
-          >
-            Our Clients
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, x: 30 }}
-            animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.7, ease, delay: 0.14 }}
-            className="text-muted-foreground text-md max-w-[280px] leading-relaxed font-medium"
-          >
-            Real products, real teams, real results — here&apos;s what founders and builders say about working with us.
-          </motion.p>
+
+        <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
+          <h2 className="text-5xl font-semibold max-w-sm text-foreground leading-[1.05]">
+            Don’t take our word for it.
+          </h2>
+          <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+            Here’s what shipped with us.
+          </p>
         </div>
+
+
+
       </div>
 
       {/* 
@@ -173,7 +163,7 @@ const TestimonialsSection = () => {
       >
         <div className="relative">
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-2 pl-2 pr-1">
+            <div className="flex gap-2 pl-2 pr-1 ">
               {testimonials.map((t, idx) => (
                 <div key={idx} className="flex-[0_0_93%] min-w-0">
                   <TestimonialCard t={t} />

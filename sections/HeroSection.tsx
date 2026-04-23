@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const ROTATING_WORDS = ["Software", "Websites", "Solutions"];
+const ROTATING_WORDS = ["Software", "Platform", "Products"];
 
 const HeroSection = () => {
   const [wordIndex, setWordIndex] = useState(0);
@@ -119,10 +119,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-border bg-background/40  mb-8 transition-colors duration-500"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border  bg-primary/20 border-primary/20  mb-8 transition-colors duration-500"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            <span className="text-xs font-semibold text-foreground tracking-wide mt-0.5">Trusted by 50+ startups &amp; businesses</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+            <span className="text-xs font-medium text-primary tracking-wide mt-0.5">50 products shipped since 2023.</span>
           </motion.div>
 
           {/* Hero Headline */}
@@ -130,10 +130,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease, delay: 0.22 }}
-            className="text-[3.4rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-semibold  text-[var(--hero-text-primary)] leading-[1.05] mb-6 max-w-4xl custom-headline transition-colors duration-500"
+            className="text-[2.5rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[4.2rem] font-black  text-[var(--hero-text-primary)] leading-[1.05] mb-6 max-w-5xl custom-headline transition-colors duration-500"
           >
 
-            Build  <span className="inline-grid align-bottom max-w-[220px]  min-w-[220px] lg:max-w-[390px] lg:min-w-[410px] " style={{ perspective: '1000px' }}>
+            We build  <span className="inline-grid align-bottom max-w-[185px]  min-w-[185px] lg:max-w-[340px] lg:min-w-[340px] " style={{ perspective: '1000px' }}>
               <AnimatePresence>
                 <motion.span
                   key={wordIndex}
@@ -141,7 +141,7 @@ const HeroSection = () => {
                   animate={{ opacity: 1, y: "0%", rotateX: 0, scale: 1 }}
                   exit={{ opacity: 0, y: "-80%", rotateX: 90, scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                  className="col-start-1 row-start-1 origin-center bg-primary/90 text-accent pl-1"
+                  className="col-start-1 row-start-1 origin-center bg-primary/90 text-accent pl-2 rounded-md"
                   style={{ transformStyle: 'preserve-3d' }}
 
                 >
@@ -149,7 +149,7 @@ const HeroSection = () => {
                 </motion.span>
               </AnimatePresence>
             </span>
-            <br />That Actually Works
+            <br />founders stop worrying about.
 
           </motion.h1>
 
@@ -158,9 +158,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease, delay: 0.36 }}
-            className="text-lg text-left sm:text-center sm:text-lg text-[var(--hero-text-secondary)] mb-10 max-w-2xl font-light transition-colors duration-500"
+            className="text-[17px] text-left sm:text-center sm:text-2xl text-foreground/70 mb-10 max-w-2xl transition-colors duration-500"
           >
-            We design and build custom web, mobile, and AI-powered applications for startups and growing businesses.
+            For founders who’ve been burned by agencies that over-promise and disappear. We scope honestly, ship on schedule, and stay accountable after launch.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -168,13 +168,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.48 }}
-            className="flex flex-row gap-4 items-center justify-center"
+            className="flex w-full flex-col lg:flex-row gap-4 lg:items-center justify-center mt-10"
           >
             <button className="h-13 px-6 sm:px-8 rounded-full border border-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
-              Our Services
+              See 3 Products We’ve Shipped →
             </button>
             <button className="relative h-13 px-6 sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 font-semibold text-base transition-all duration-300 overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
-              Start a Project
+              Book a 30-min Strategy Call
             </button>
           </motion.div>
 
@@ -186,7 +186,7 @@ const HeroSection = () => {
             className="mt-32 flex flex-col items-center"
           >
             <p className=" px-14 lg:px-0 text-xs uppercase tracking-widest text-foreground mb-8 font-medium transition-colors duration-500">
-              Backed by founders and  businesses worldwide:
+              Our Other Servises:
             </p>
             <div className="flex flex-wrap dark:bg-white border border-black  p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
               <img src="/img/Clogo/1.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7 border-black" />

@@ -48,11 +48,14 @@ const Footer = () => {
             transition={{ duration: 0.75, ease }}
 
           >
-            <h2 className="text-5xl md:text-6xl font-bold  mb-10 leading-[1.1]">
-              Ready to build<br />your next product?
+            <h2 className="text-4xl md:text-5xl font-bold  mb-4 max-w-2xl leading-[1.1]">
+              Your next product doesn&apos;t have a launch date yet. Let&apos;s fix that.
             </h2>
+            <p className="text-muted-foreground text-lg mb-10 max-w-lg leading-relaxed font-medium">
+              Most of our projects kick off within 2 weeks of first contact.
+            </p>
             <Link href="/contact" className="group inline-flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
-              <span>Start a Project</span>
+              <span>Get a Written Scope Estimate</span>
               <div className="ml-6 bg-black p-2 rounded-md group-hover:rotate-45 transition-transform duration-300">
                 <ArrowUpRight className="w-5 h-5 text-accent" />
               </div>
@@ -92,10 +95,16 @@ const Footer = () => {
                 Hyderabad
               </h3>
             </div>
-            <div>
-              <span className="text-[10px] tracking-widest text-foreground uppercase ">/Company size</span>
+            <div className="mb-4">
+              <span className="text-[10px] tracking-widest text-foreground uppercase ">/Email</span>
               <p className="text-xl md:text-2xl font-medium mt-2">
-                11-50 employees
+                hello@buzzler.in
+              </p>
+            </div>
+            <div>
+              <span className="text-[10px] tracking-widest text-foreground uppercase ">/Studio</span>
+              <p className="text-xl md:text-2xl font-medium mt-2">
+                Shipping since 2023
               </p>
             </div>
           </motion.div>
@@ -164,18 +173,13 @@ const Footer = () => {
             <div className="w-32 h-[2px] bg-border relative overflow-hidden mb-2">
               <div className="absolute left-0 top-0 h-full w-1/3 bg-primary" />
             </div>
-            <p className="text-[10px] tracking-[0.2em]  text-foreground">
-              @{currentYear} BUZZLER. ALL RIGHTS RESERVED.
+            <p className="text-[10px] tracking-[0.2em] text-center text-foreground">
+              &copy;{currentYear} BUZZLER TECHNOLOGIES. ALL RIGHTS RESERVED.
             </p>
           </div>
 
-          <div className="flex items-center gap-2 group cursor-pointer">
-            <span className="text-[10px] tracking-widest text-foreground ">MADE BY</span>
-            <a href="https://safepass-vault.vercel.app/" target='_blank' rel='noopener noreferrer'>
-              <span className="text-xs font-bold er flex items-center uppercase gap-1 group-hover:text-[#fa57579d] transition-colors">
-                Atul Kumar <Zap className="w-3 h-3 fill-current" />
-              </span>
-            </a>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] tracking-widest text-foreground/60">&copy; {currentYear} Buzzler Technologies, Hyderabad.</span>
           </div>
         </motion.div>
 
@@ -188,9 +192,9 @@ const Footer = () => {
           className="mt-5 select-none pointer-events-none flex flex-col items-center overflow-visible"
         >
           <h4
-            className="text-[18vw] md:text-[17vw] font-black tracking-[10]  leading-none  uppercase whitespace-nowrap"
+            className="text-[16vw] md:text-[13.5vw] font-black tracking-[10]  leading-none  uppercase whitespace-nowrap"
             style={{
-              WebkitTextStroke: '2.5px var(--muted-foreground)',
+              WebkitTextStroke: '3px var(--muted-foreground)',
               color: 'transparent'
             }}
           >
