@@ -66,10 +66,10 @@ const ProcessSection = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tighter leading-tight">
+          <h2 className="text-5xl font-semibold text-foreground leading-[1.05]">
             A process built<br />for clarity.
           </h2>
-          <p className="text-foreground/60 text-[13px] md:text-sm max-w-sm leading-relaxed font-medium">
+          <p className="text-muted-foreground text-md max-w-sm leading-relaxed font-medium">
             Four steps from first conversation to shipped product. No black boxes, no surprises.
           </p>
         </div>
@@ -100,20 +100,19 @@ const ProcessSection = () => {
               {/* Top row: number + tag */}
               <div className="flex items-start justify-between mb-8">
                 <span
-                  className="text-[56px] font-black leading-none tracking-tighter select-none transition-colors duration-300"
-                  style={{ color: 'rgba(var(--foreground-rgb, 255 255 255) / 0.06)' }}
+                  className="text-[56px] font-black text-black/20  dark:text-white/20 leading-none tracking-tighter select-none transition-colors duration-300"
                   aria-hidden="true"
                 >
                   {step.number}
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-foreground/40 border border-border px-2 py-1 rounded-sm mt-1">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-foreground border border-primary/60 px-2 py-1 rounded-sm mt-1">
                   {step.tag}
                 </span>
               </div>
 
               {/* Content */}
               <div>
-                <h3 className="text-xl font-bold text-foreground tracking-tight mb-3">
+                <h3 className="text-2xl font-bold text-foreground tracking-tight mb-3">
                   {step.title}
                 </h3>
                 <p className="text-foreground/50 text-sm leading-relaxed">

@@ -110,7 +110,7 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
 
       {/* Read more indicator */}
       <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest font-mono uppercase text-accent opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-1 transition-all duration-300">
-        Read article <ArrowUpRight className="w-3 h-3" />
+        View Website <ArrowUpRight className="w-3 h-3" />
       </div>
     </a>
   </motion.article>

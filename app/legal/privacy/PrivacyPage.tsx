@@ -28,7 +28,7 @@ function Section({ number, title, children }: { number: string; title: string; c
       <div className="grid md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
           <span className="text-[10px] tracking-widest font-mono text-muted-foreground uppercase">{number}</span>
-          <h2 className="text-lg font-black mt-1">{title}</h2>
+          <h2 className="text-lg font-semibold mt-1">{title}</h2>
         </div>
         <div className="md:col-span-3 text-sm text-muted-foreground leading-relaxed space-y-4">
           {children}
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
       subtitle={`Last updated: ${LAST_UPDATED}`}
     >
       <FadeIn className="mb-10">
-        <div className="bg-surface border border-border rounded-2xl p-6 text-sm text-muted-foreground leading-relaxed">
+        <div className="bg-surface  rounded-xl p-5 text-base text-muted-foreground leading-relaxed">
           Buzzler Technologies is committed to protecting your privacy. This policy explains what
           information we collect, how we use it, and your rights over your data. If you have any
           questions, please{' '}
@@ -125,8 +125,8 @@ export default function PrivacyPage() {
           </ul>
           <p>
             To exercise any of these rights, please contact us at{' '}
-            <a href="mailto:privacy@buzzler.com" className="text-foreground font-semibold hover:text-accent transition-colors">
-              privacy@buzzler.com
+            <a href="mailto:privacy@buzzler.in" className="text-foreground font-semibold hover:text-accent transition-colors">
+              privacy@buzzler.in
             </a>
             .
           </p>
@@ -159,8 +159,8 @@ export default function PrivacyPage() {
         <Section number="/10" title="Contact">
           <p>
             For privacy-related enquiries, contact us at{' '}
-            <a href="mailto:privacy@buzzler.com" className="text-foreground font-semibold hover:text-accent transition-colors">
-              privacy@buzzler.com
+            <a href="mailto:privacy@buzzler.in" className="text-foreground font-semibold hover:text-accent transition-colors">
+              privacy@buzzler.in
             </a>{' '}
             or through our{' '}
             <Link href="/contact" className="text-foreground font-semibold hover:text-accent transition-colors">

@@ -81,7 +81,7 @@ const ServicesSection = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.65, ease }}
-            className="text-5xl md:text-6xl font-bold text-foreground tracking-tighter leading-tight"
+            className="text-5xl font-semibold text-foreground leading-[1.05]"
           >
             Digital products,<br />end to end.
           </motion.h2>
@@ -89,7 +89,7 @@ const ServicesSection = () => {
             initial={{ opacity: 0, x: 20 }}
             animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.65, ease, delay: 0.12 }}
-            className="text-foreground/60 text-[13px] md:text-sm max-w-sm leading-relaxed font-medium"
+            className="text-muted-foreground text-md max-w-sm leading-relaxed font-medium"
           >
             From idea to launch — we build the web apps, mobile apps, and custom software your business needs to grow.
           </motion.p>
@@ -105,7 +105,7 @@ const ServicesSection = () => {
             initial="hidden"
             animate={gridInView ? 'visible' : 'hidden'}
           >
-            <ServiceCard service={services[0]} height="h-[320px]" />
+            <ServiceCard service={services[0]} height="h-[280px]" />
           </motion.div>
           <motion.div
             className="lg:col-span-3"
@@ -114,7 +114,7 @@ const ServicesSection = () => {
             initial="hidden"
             animate={gridInView ? 'visible' : 'hidden'}
           >
-            <ServiceCard service={services[1]} height="h-[320px]" />
+            <ServiceCard service={services[1]} height="h-[280px]" />
           </motion.div>
 
           {/* Bottom Row: 3 smaller cards */}
@@ -127,7 +127,7 @@ const ServicesSection = () => {
               initial="hidden"
               animate={gridInView ? 'visible' : 'hidden'}
             >
-              <ServiceCard service={svc} height="h-[300px]" />
+              <ServiceCard service={svc} height="h-[290px]" />
             </motion.div>
           ))}
         </div>
@@ -139,10 +139,10 @@ const ServicesSection = () => {
 const ServiceCard = ({ service, height }: { service: typeof services[0], height: string }) => {
   return (
     <div
-      className={`bg-surface p-6 rounded-lg overflow-hidden flex flex-col justify-end relative group cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${height}`}
+      className={`bg-surface p-4 md:p-6 rounded-lg overflow-hidden flex flex-col justify-end relative group cursor-pointer transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] ${height}`}
     >
       {/* 3D Image Background Overlay */}
-      <div className="absolute -top-4 -right-33 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+      <div className="absolute -top-0 -right-23 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
         <img
           src={service.img}
           alt={service.title}
@@ -150,7 +150,7 @@ const ServiceCard = ({ service, height }: { service: typeof services[0], height:
         />
       </div>
 
-      <div className="relative z-10 pb-4">
+      <div className="relative z-10">
         <h3 className="text-2xl md:text-[28px] font-bold text-foreground mb-3 tracking-tight leading-[1.1]">
           {service.title}
         </h3>

@@ -7,8 +7,8 @@ import { Zap, Shield, Globe2, Layers } from 'lucide-react';
 const stats = [
   { value: '2023', label: 'Year Founded' },
   { value: '11–50', label: 'Team Size' },
-  { value: '100%', label: 'Code Ownership' },
-  { value: '#1', label: 'Mobility & Travel-Tech' },
+  { value: '100%', label: 'Ownership' },
+  { value: '#1', label: 'Mobility' },
 ];
 
 const reasons = [
@@ -72,10 +72,10 @@ const WhyUsSection = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground tracking-tighter leading-tight">
+          <h2 className="text-5xl font-semibold text-foreground leading-[1.05]">
             Streamlined software solutions.
           </h2>
-          <p className="text-foreground/60 text-[13px] md:text-sm max-w-sm leading-relaxed font-medium">
+          <p className="text-muted-foreground text-md max-w-sm leading-relaxed font-medium">
             Buzzler is a fast-growing technology company building smart digital solutions that simplify real-world experiences — headquartered in Hyderabad, India.
           </p>
         </div>
@@ -86,18 +86,18 @@ const WhyUsSection = () => {
           variants={containerVariants}
           initial="hidden"
           animate={statsInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4"
         >
           {stats.map((stat) => (
             <motion.div
               key={stat.label}
               variants={itemVariants}
-              className="bg-surface rounded-lg p-6 flex flex-col gap-1 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-0.5 active:scale-[0.99] cursor-pointer"
+              className="bg-surface rounded-lg p-5 flex flex-col gap-1 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-0.5 active:scale-[0.99] cursor-pointer"
             >
               <span className="text-4xl md:text-5xl font-black tracking-tighter text-foreground">
                 {stat.value}
               </span>
-              <span className="text-foreground/40 text-[11px] font-mono uppercase tracking-widest">
+              <span className="text-muted-foreground text-[11px] font-mono uppercase tracking-widest">
                 {stat.label}
               </span>
             </motion.div>
@@ -118,17 +118,17 @@ const WhyUsSection = () => {
               <motion.div
                 key={reason.title}
                 variants={itemVariants}
-                className="bg-surface relative rounded-lg p-8 group overflow-hidden flex flex-col gap-5 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99] cursor-pointer"
+                className="bg-surface relative rounded-lg p-6 group overflow-hidden flex flex-col gap-5 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99] cursor-pointer"
               >
-                <div className=' absolute top-14 -rotate-20 right-0 scale-[6] opacity-[0.07] group-hover:opacity-[0.3] transition-colors duration-300'><Icon className="w-15 h-15 text-foreground" strokeWidth={2} /></div>
+                <div className=' absolute top-19 -rotate-20 right-0 scale-[4] opacity-[0.07] group-hover:opacity-[0.3] transition-colors duration-300'><Icon className="w-15 h-15 text-foreground" strokeWidth={2} /></div>
                 <div className="w-10 h-10 bg-foreground/5 border border-border rounded-sm flex items-center justify-center group-hover:bg-foreground/10 transition-colors duration-300">
-                  <Icon className="w-5 h-5 text-foreground/70" strokeWidth={1.5} />
+                  <Icon className="w-7 h-7 text-foreground/70"  strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-foreground tracking-tight mb-2">
+                  <h3 className="text-2xl font-bold text-foreground tracking-tight mb-2">
                     {reason.title}
                   </h3>
-                  <p className="text-foreground/50 text-sm leading-relaxed max-w-md">
+                  <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
                     {reason.desc}
                   </p>
                 </div>

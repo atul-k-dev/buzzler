@@ -124,7 +124,7 @@ const TestimonialsSection = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={headerInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.7, ease, delay: 0.14 }}
-            className="text-foreground/40 text-xs md:text-sm max-w-[280px] leading-relaxed font-medium"
+            className="text-muted-foreground text-md max-w-[280px] leading-relaxed font-medium"
           >
             Real products, real teams, real results — here&apos;s what founders and builders say about working with us.
           </motion.p>

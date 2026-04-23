@@ -53,7 +53,7 @@ const GetInTouchSection = () => {
               <Paperclip className="w-5 h-5 text-foreground opacity-80" />
               <div className="mt-8">
                 <div className="text-xs text-muted-foreground uppercase tracking-widest font-bold mb-1">/CHAT TO SALES</div>
-                <div className="font-semibold text-base">hello@buzzler.com</div>
+                <div className="font-semibold text-base">hello@buzzler.in</div>
               </div>
             </div>
 

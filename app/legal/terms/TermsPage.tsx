@@ -28,7 +28,7 @@ function Section({ number, title, children }: { number: string; title: string; c
       <div className="grid md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
           <span className="text-[10px] tracking-widest font-mono text-muted-foreground uppercase">{number}</span>
-          <h2 className="text-lg font-black mt-1">{title}</h2>
+          <h2 className="text-xl font-semibold mt-1">{title}</h2>
         </div>
         <div className="md:col-span-3 text-sm text-muted-foreground leading-relaxed space-y-4">
           {children}
@@ -48,7 +48,7 @@ export default function TermsPage() {
       subtitle={`Last updated: ${LAST_UPDATED}`}
     >
       <FadeIn className="mb-10">
-        <div className="bg-surface border border-border rounded-2xl p-6 text-sm text-muted-foreground leading-relaxed">
+        <div className="bg-surface rounded-xl p-5 text-base text-muted-foreground leading-relaxed">
           Please read these Terms of Service carefully before using any Buzzler Technologies products
           or services. By accessing or using our services, you agree to be bound by these terms. If
           you do not agree, please discontinue use immediately.
@@ -142,8 +142,8 @@ export default function TermsPage() {
         <Section number="/09" title="Contact">
           <p>
             Questions about these Terms? Reach us at{' '}
-            <a href="mailto:legal@buzzler.com" className="text-foreground font-semibold hover:text-accent transition-colors">
-              legal@buzzler.com
+            <a href="mailto:legal@buzzler.in" className="text-foreground font-semibold hover:text-accent transition-colors">
+              legal@buzzler.in
             </a>{' '}
             or visit our{' '}
             <Link href="/contact" className="text-foreground font-semibold hover:text-accent transition-colors">

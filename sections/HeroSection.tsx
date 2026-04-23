@@ -12,7 +12,7 @@ const HeroSection = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         :root {
-         --hero-bg: #ffefedff;
+         --hero-bg: #ffe6e2ff;
           --hero-glow-color: rgba(255, 58, 104, 0.1);
           --hero-glow-color-solid: rgba(255, 58, 104, 0.25);
           --hero-line-color: rgba(255, 58, 104, 0.4);
@@ -22,6 +22,8 @@ const HeroSection = () => {
           --hero-text-primary: #202020ff;
           --hero-text-secondary: #222222ff;
         }
+
+    
         .dark {
           --hero-bg: #0f0307ff;
           --hero-glow-color: rgba(255, 58, 160, 0.1);
@@ -57,9 +59,22 @@ const HeroSection = () => {
           background: linear-gradient(180deg, transparent 0%, var(--hero-glow-color) 30%, var(--hero-glow-color-solid) 50%, var(--hero-glow-color) 70%, transparent 100%);
           background-size: 150% 250%;
           animation: drift 1s ease-in-out infinite;
-          filter: blur(15px);
+          filter: blur(10px);
           z-index: 0;
         }
+
+        @media screen and (min-width: 768px) {
+          :root {
+           --hero-bg: #ffcdc6ff;
+          }
+         .dark {
+          --hero-bg: #0f0307ff;
+         }
+          .vertical-glow {
+          filter: blur(20px);
+          }
+        }
+
       `}} />
 
       {/* Dynamic Background Setup - Vertical Lines & Deep Purple Glow */}
@@ -144,9 +159,9 @@ const HeroSection = () => {
             <p className=" px-14 lg:px-0 text-xs uppercase tracking-widest text-foreground mb-8 font-medium transition-colors duration-500">
               Backed by founders and  businesses worldwide:
             </p>
-            <div className="flex flex-wrap bg-white/90 p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
-              <img src="/img/Clogo/1.jpg" alt="" className=" lg:w-30 w-20 lg:border-r lg:pr-7 border-border" />
-              <img src="/img/Clogo/2.png" alt="" className="lg:w-30 w-20  lg:border-r lg:pr-7 border-border" />
+            <div className="flex flex-wrap bg-white/65 border border-primary  p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
+              <img src="/img/Clogo/1.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7 border-primary" />
+              <img src="/img/Clogo/2.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7  border-primary" />
               <img src="/img/Clogo/3.png" alt="" className="lg:w-30 w-20  " />
             </div>
           </motion.div>

@@ -91,10 +91,10 @@ export default function AboutPage() {
           {stats.map((s) => (
             <div
               key={s.label}
-              className="bg-background flex flex-col items-center justify-center py-10 px-6 gap-1"
+              className="bg-background flex flex-col items-center justify-center py-8 px-6 gap-1"
             >
               <span className="text-4xl font-black tracking-tight">{s.value}</span>
-              <span className="text-xs font-mono tracking-widest text-muted-foreground uppercase">
+              <span className="text-xs font-mono tracking-widest text-muted-foreground uppercase mt-1 text-center">
                 {s.label}
               </span>
             </div>
@@ -166,19 +166,19 @@ export default function AboutPage() {
 
       {/* ── CTA ── */}
       <FadeIn delay={0.05}>
-        <div className="rounded-xl  bg-surface p-7 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="rounded-xl  bg-surface p-5 md:p-7 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="text-2xl font-black mb-2">Ready to work together?</h3>
+            <h3 className="text-xl md:text-2xl font-bold mb-2">Ready to work together?</h3>
             <p className="text-muted-foreground text-sm">
               Tell us about your project and let's build something remarkable.
             </p>
           </div>
           <Link
             href="/contact"
-            className="group flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-bold whitespace-nowrap hover:opacity-90 transition-all active:scale-95"
+            className="group flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-semibold whitespace-nowrap hover:opacity-90 transition-all active:scale-95"
           >
             Start a Project
-            <div className="ml-4 bg-black p-2 rounded-md group-hover:rotate-45 transition-transform duration-300">
+            <div className="ml-4 bg-foreground p-2 rounded-md group-hover:rotate-45 transition-transform duration-300">
               <ArrowUpRight className="w-4 h-4 text-accent" />
             </div>
           </Link>

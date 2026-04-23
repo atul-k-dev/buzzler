@@ -173,7 +173,7 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="fixed inset-0 z-40 bg-black/80 backdrop-blur-[4px] md:hidden"
+              className="fixed inset-0 z-40 bg-background/60 backdrop-blur-[4px] md:hidden"
               onClick={() => setMobileOpen(false)}
             />
 
@@ -184,7 +184,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -12, scale: 0.97 }}
               transition={{ duration: 0.3, ease }}
-              className="fixed top-20 left-4 right-4 z-50 md:hidden bg-surface border border-border rounded-2xl overflow-hidden shadow-2xl"
+              className="fixed top-20 left-4 right-4 z-50 md:hidden bg-surface border border-border rounded-2xl overflow-hidden"
             >
               {/* Nav links */}
               <div className="flex flex-col py-3">
@@ -211,10 +211,10 @@ const Navbar = () => {
               >
                 <button
                   onClick={scrollToContact}
-                  className="w-full flex items-center justify-between bg-foreground text-background font-bold text-sm pl-5 pr-3 py-3 rounded-full hover:opacity-90 transition-all active:scale-[0.98]"
+                  className="w-full flex items-center justify-between bg-foreground text-background font-semibold text-sm pl-5 pr-2 py-2 rounded-full hover:opacity-90 transition-all active:scale-[0.98]"
                 >
                   <span>Start a Project</span>
-                  <div className="w-8 h-8 bg-background/10 rounded-lg flex items-center justify-center">
+                  <div className="w-13 h-9 bg-background/20 rounded-full flex items-center justify-center">
                     <ArrowUpRight className="w-4 h-4" />
                   </div>
                 </button>

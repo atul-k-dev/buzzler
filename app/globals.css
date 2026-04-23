@@ -1,4 +1,6 @@
 @import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/600.css";
@@ -22,7 +24,7 @@
   --background: #ffffff;
   --foreground: #1a1a1a;
 
-  --surface: #d4d4d4;
+  --surface: #e0e0e0;
   --surface-foreground: #1b1b1b;
 
   --primary: #000000;
