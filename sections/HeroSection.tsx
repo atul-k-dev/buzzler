@@ -1,11 +1,22 @@
 'use client';
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
+const ROTATING_WORDS = ["Software", "Websites", "Solutions"];
+
 const HeroSection = () => {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex((prev) => (prev + 1) % ROTATING_WORDS.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-[var(--hero-bg)] transition-colors duration-700">
       {/* Embedded CSS for animations and adaptive colors */}
@@ -90,8 +101,8 @@ const HeroSection = () => {
         <div className="vertical-glow hidden md:block" style={{ left: '2%', width: '12vw', animationDuration: '32s' }} />
         <div className="vertical-glow  md:block" style={{ left: '15%', width: '18vw', animationDuration: '28s', animationDelay: '-8s' }} />
         <div className="vertical-glow hidden md:block" style={{ left: '30%', width: '10vw', animationDuration: '24s', animationDelay: '-5s' }} />
-        <div className="vertical-glow hidden md:block" style={{ left: '45%', width: '15vw', animationDuration: '30s', animationDelay: '-15s' }} />
-        <div className="vertical-glow hidden md:block" style={{ left: '55%', width: '20vw', animationDuration: '35s', animationDelay: '-10s' }} />
+        <div className="vertical-glow  md:block" style={{ left: '45%', width: '15vw', animationDuration: '30s', animationDelay: '-15s' }} />
+        <div className="vertical-glow  md:block" style={{ left: '55%', width: '20vw', animationDuration: '35s', animationDelay: '-10s' }} />
         <div className="vertical-glow hidden md:block" style={{ left: '72%', width: '14vw', animationDuration: '26s', animationDelay: '-12s' }} />
         <div className="vertical-glow  md:block" style={{ left: '85%', width: '12vw', animationDuration: '28s', animationDelay: '-3s' }} />
         <div className="vertical-glow hidden md:block" style={{ left: '94%', width: '16vw', animationDuration: '33s', animationDelay: '-7s' }} />
@@ -119,9 +130,27 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease, delay: 0.22 }}
-            className="text-[3.2rem] text-left sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-semibold tracking-tight text-[var(--hero-text-primary)] leading-[1.05] mb-6 max-w-4xl custom-headline transition-colors duration-500"
+            className="text-[3.4rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-semibold  text-[var(--hero-text-primary)] leading-[1.05] mb-6 max-w-4xl custom-headline transition-colors duration-500"
           >
-            Build Software<br />That Actually Works
+
+            Build  <span className="inline-grid align-bottom max-w-[220px]  min-w-[220px] lg:max-w-[390px] lg:min-w-[410px] " style={{ perspective: '1000px' }}>
+              <AnimatePresence>
+                <motion.span
+                  key={wordIndex}
+                  initial={{ opacity: 0, y: "80%", rotateX: -90, scale: 0.9 }}
+                  animate={{ opacity: 1, y: "0%", rotateX: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: "-80%", rotateX: 90, scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                  className="col-start-1 row-start-1 origin-center bg-primary/90 text-accent pl-1"
+                  style={{ transformStyle: 'preserve-3d' }}
+
+                >
+                  {ROTATING_WORDS[wordIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
+            <br />That Actually Works
+
           </motion.h1>
 
           {/* Subheading */}
@@ -141,7 +170,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, ease, delay: 0.48 }}
             className="flex flex-row gap-4 items-center justify-center"
           >
-            <button className="h-13 px-6 sm:px-8 rounded-full border border-accent hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
+            <button className="h-13 px-6 sm:px-8 rounded-full border border-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
               Our Services
             </button>
             <button className="relative h-13 px-6 sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 font-semibold text-base transition-all duration-300 overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
@@ -159,9 +188,9 @@ const HeroSection = () => {
             <p className=" px-14 lg:px-0 text-xs uppercase tracking-widest text-foreground mb-8 font-medium transition-colors duration-500">
               Backed by founders and  businesses worldwide:
             </p>
-            <div className="flex flex-wrap bg-white/65 border border-primary  p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
-              <img src="/img/Clogo/1.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7 border-primary" />
-              <img src="/img/Clogo/2.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7  border-primary" />
+            <div className="flex flex-wrap dark:bg-white border border-black  p-2 rounded-full px-5 py-3 justify-center gap-5 lg:gap-7 items-center transition-all duration-700">
+              <img src="/img/Clogo/1.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7 border-black" />
+              <img src="/img/Clogo/2.png" alt="" className="lg:w-30 w-20 lg:border-r lg:pr-7  border-black" />
               <img src="/img/Clogo/3.png" alt="" className="lg:w-30 w-20  " />
             </div>
           </motion.div>

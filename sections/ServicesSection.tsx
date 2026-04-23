@@ -67,7 +67,7 @@ const ServicesSection = () => {
         <div className="w-full h-[1px] bg-border relative">
           <div className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }} />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">/WHAT WE BUILD</span>
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">/WHAT WE BUILD</span>
         </div>
       </motion.div>
 
@@ -151,7 +151,7 @@ const ServiceCard = ({ service, height }: { service: typeof services[0], height:
       </div>
 
       <div className="relative z-10">
-        <h3 className="text-2xl md:text-[28px] font-bold text-foreground mb-3 tracking-tight leading-[1.1]">
+        <h3 className="text-2xl md:text-[28px] font-bold text-foreground mb-3  leading-[1.1]">
           {service.title}
         </h3>
         <p className="text-foreground/60 text-sm md:text-[15px] leading-snug max-w-[280px] font-medium">

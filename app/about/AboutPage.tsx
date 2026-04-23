@@ -93,8 +93,8 @@ export default function AboutPage() {
               key={s.label}
               className="bg-background flex flex-col items-center justify-center py-8 px-6 gap-1"
             >
-              <span className="text-4xl font-black tracking-tight">{s.value}</span>
-              <span className="text-xs font-mono tracking-widest text-muted-foreground uppercase mt-1 text-center">
+              <span className="text-4xl font-black ">{s.value}</span>
+              <span className="text-xs  tracking-widest text-muted-foreground uppercase mt-1 text-center">
                 {s.label}
               </span>
             </div>
@@ -106,10 +106,10 @@ export default function AboutPage() {
       <FadeIn delay={0.05}>
         <div className="grid md:grid-cols-2 gap-12 items-start mb-24">
           <div>
-            <p className="text-[10px] tracking-[0.25em] font-mono text-muted-foreground uppercase mb-4">
+            <p className="text-[10px] tracking-[0.25em]  text-muted-foreground uppercase mb-4">
               /our story
             </p>
-            <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-black  leading-tight mb-6">
               Born from a gap in the market.
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-4">
@@ -139,10 +139,10 @@ export default function AboutPage() {
 
       {/* ── Values ── */}
       <FadeIn delay={0.05}>
-        <p className="text-[10px] tracking-[0.25em] font-mono text-muted-foreground uppercase mb-4">
+        <p className="text-[10px] tracking-[0.25em]  text-muted-foreground uppercase mb-4">
           /our values
         </p>
-        <h2 className="text-3xl md:text-4xl font-black tracking-tight leading-tight mb-10">
+        <h2 className="text-3xl md:text-4xl font-black  leading-tight mb-10">
           What we believe in.
         </h2>
       </FadeIn>

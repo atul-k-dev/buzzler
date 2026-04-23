@@ -48,7 +48,7 @@ const Footer = () => {
             transition={{ duration: 0.75, ease }}
 
           >
-            <h2 className="text-5xl md:text-6xl font-bold tracking-tight mb-10 leading-[1.1]">
+            <h2 className="text-5xl md:text-6xl font-bold  mb-10 leading-[1.1]">
               Ready to build<br />your next product?
             </h2>
             <Link href="/contact" className="group inline-flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-sm font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
@@ -87,13 +87,13 @@ const Footer = () => {
             className="col-span-2 lg:col-span-2"
           >
             <div className="mb-4">
-              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Headquarters</span>
+              <span className="text-[10px] tracking-widest text-foreground uppercase">/Headquarters</span>
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground mt-2 cursor-pointer hover:opacity-80 transition-opacity">
                 Hyderabad
               </h3>
             </div>
             <div>
-              <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company size</span>
+              <span className="text-[10px] tracking-widest text-foreground uppercase ">/Company size</span>
               <p className="text-xl md:text-2xl font-medium mt-2">
                 11-50 employees
               </p>
@@ -108,7 +108,7 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
             className='w-full lg:text-right'
           >
-            <span className="text-[10px] tracking-widest text-foreground uppercase   font-mono">/Navigation</span>
+            <span className="text-[10px] tracking-widest text-foreground uppercase   ">/Navigation</span>
             <ul className="mt-6 space-y-4 font-semibold ">
               <li><Link href="/" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Home</Link></li>
               <li><Link href="/#services" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Services</Link></li>
@@ -125,7 +125,7 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
             className='w-full lg:text-right'
           >
-            <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Company</span>
+            <span className="text-[10px] tracking-widest text-foreground uppercase ">/Company</span>
             <ul className="mt-6 space-y-4 font-semibold ">
               <li><Link href="/about" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">About Us</Link></li>
               <li><Link href="/legal/terms" className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Terms of Services</Link></li>
@@ -142,7 +142,7 @@ const Footer = () => {
             animate={navInView ? 'visible' : 'hidden'}
             className='w-full lg:text-right'
           >
-            <span className="text-[10px] tracking-widest text-foreground uppercase font-mono">/Follow Us</span>
+            <span className="text-[10px] tracking-widest text-foreground uppercase ">/Follow Us</span>
             <ul className="mt-6 space-y-4 font-semibold ">
               <li><a href="https://www.youtube.com/channel/UCV7QqrR7dqIcAU4rrQ6T5wA" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Youtube</a></li>
               <li><a href="https://www.instagram.com/balert.in/" target='_blank' rel='noopener noreferrer' className="text-lg text-foreground hover:text-accent transition-all active:scale-95 inline-block">Instagram</a></li>
@@ -164,15 +164,15 @@ const Footer = () => {
             <div className="w-32 h-[2px] bg-border relative overflow-hidden mb-2">
               <div className="absolute left-0 top-0 h-full w-1/3 bg-primary" />
             </div>
-            <p className="text-[10px] tracking-[0.2em] font-mono text-foreground">
+            <p className="text-[10px] tracking-[0.2em]  text-foreground">
               @{currentYear} BUZZLER. ALL RIGHTS RESERVED.
             </p>
           </div>
 
           <div className="flex items-center gap-2 group cursor-pointer">
-            <span className="text-[10px] tracking-widest text-foreground font-mono">MADE BY</span>
+            <span className="text-[10px] tracking-widest text-foreground ">MADE BY</span>
             <a href="https://safepass-vault.vercel.app/" target='_blank' rel='noopener noreferrer'>
-              <span className="text-xs font-bold tracking-tighter flex items-center uppercase gap-1 group-hover:text-[#fa57579d] transition-colors">
+              <span className="text-xs font-bold er flex items-center uppercase gap-1 group-hover:text-[#fa57579d] transition-colors">
                 Atul Kumar <Zap className="w-3 h-3 fill-current" />
               </span>
             </a>
@@ -188,7 +188,7 @@ const Footer = () => {
           className="mt-5 select-none pointer-events-none flex flex-col items-center overflow-visible"
         >
           <h4
-            className="text-[15vw] font-black tracking-[10] xl:tracking-tighter leading-none italic uppercase whitespace-nowrap"
+            className="text-[15vw] font-black tracking-[10] xl:er leading-none italic uppercase whitespace-nowrap"
             style={{
               WebkitTextStroke: '2.5px var(--muted-foreground)',
               color: 'transparent'

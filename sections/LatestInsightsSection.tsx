@@ -89,7 +89,7 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
 
       {/* Meta row */}
       <div className="flex items-center justify-between mb-3">
-        <span className="flex items-center gap-1.5 text-[10px] tracking-[0.2em] font-mono uppercase text-muted-foreground">
+        <span className="flex items-center gap-1.5 text-[10px] tracking-[0.2em]  uppercase text-muted-foreground">
           <span className="w-2 h-2 rounded-full bg-accent inline-block" />
           {post.category}
         </span>
@@ -109,7 +109,7 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
       </p>
 
       {/* Read more indicator */}
-      <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest font-mono uppercase text-accent opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-1 transition-all duration-300">
+      <div className="mt-4 flex items-center gap-1.5 text-[11px] tracking-widest  uppercase text-accent opacity-0 group-hover:opacity-100 translate-x-0 group-hover:translate-x-1 transition-all duration-300">
         View Website <ArrowUpRight className="w-3 h-3" />
       </div>
     </a>
@@ -152,7 +152,7 @@ const LatestInsightsSection = () => {
             className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
           />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">
             /WHAT WE BUILD
           </span>
         </div>

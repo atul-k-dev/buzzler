@@ -27,7 +27,7 @@ function Section({ number, title, children }: { number: string; title: string; c
     <FadeIn delay={0.05} className="border-t border-border pt-8 pb-4">
       <div className="grid md:grid-cols-4 gap-6">
         <div className="md:col-span-1">
-          <span className="text-[10px] tracking-widest font-mono text-muted-foreground uppercase">{number}</span>
+          <span className="text-[10px] tracking-widest  text-muted-foreground uppercase">{number}</span>
           <h2 className="text-xl font-semibold mt-1">{title}</h2>
         </div>
         <div className="md:col-span-3 text-sm text-muted-foreground leading-relaxed space-y-4">

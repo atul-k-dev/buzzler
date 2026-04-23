@@ -56,7 +56,7 @@ const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
   <div className="w-full flex-shrink-0 bg-surface border border-border rounded-2xl p-4 sm:p-6 flex flex-col justify-between group hover:border-foreground/20 active:scale-[0.99] transition-all duration-300 relative cursor-pointer">
     <div className="mb-6">
       <Quote className="w-8 h-8 text-foreground mb-4 fill-foreground" strokeWidth={1} />
-      <p className="text-foreground text-sm md:text-lg font-semibold leading-relaxed tracking-tight line-clamp-4">
+      <p className="text-foreground text-sm md:text-lg font-semibold leading-relaxed  line-clamp-4">
         &quot;{t.text}&quot;
       </p>
     </div>
@@ -67,7 +67,7 @@ const TestimonialCard = ({ t }: { t: typeof testimonials[0] }) => (
           <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
         </div>
         <div>
-          <h5 className="text-foreground font-bold text-sm tracking-tight">{t.name}</h5>
+          <h5 className="text-foreground font-bold text-sm ">{t.name}</h5>
           <p className="text-foreground/40 text-[11px] font-medium uppercase tracking-wider">{t.role}</p>
         </div>
       </div>
@@ -103,7 +103,7 @@ const TestimonialsSection = () => {
             className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
           />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">
             /TESTIMONIALS
           </span>
         </div>

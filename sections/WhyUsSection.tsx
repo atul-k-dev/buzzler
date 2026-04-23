@@ -63,7 +63,7 @@ const WhyUsSection = () => {
             className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
           />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">
             /WHY BUZZLER
           </span>
         </div>
@@ -94,10 +94,10 @@ const WhyUsSection = () => {
               variants={itemVariants}
               className="bg-surface rounded-lg p-5 flex flex-col gap-1 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-0.5 active:scale-[0.99] cursor-pointer"
             >
-              <span className="text-4xl md:text-5xl font-black tracking-tighter text-foreground">
+              <span className="text-4xl md:text-5xl font-black er text-foreground">
                 {stat.value}
               </span>
-              <span className="text-muted-foreground text-[11px] font-mono uppercase tracking-widest">
+              <span className="text-muted-foreground text-[11px]  uppercase tracking-widest">
                 {stat.label}
               </span>
             </motion.div>
@@ -122,10 +122,10 @@ const WhyUsSection = () => {
               >
                 <div className=' absolute top-19 -rotate-20 right-0 scale-[4] opacity-[0.07] group-hover:opacity-[0.3] transition-colors duration-300'><Icon className="w-15 h-15 text-foreground" strokeWidth={2} /></div>
                 <div className="w-10 h-10 bg-foreground/5 border border-border rounded-sm flex items-center justify-center group-hover:bg-foreground/10 transition-colors duration-300">
-                  <Icon className="w-7 h-7 text-foreground/70"  strokeWidth={1.5} />
+                  <Icon className="w-7 h-7 text-foreground/70" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground tracking-tight mb-2">
+                  <h3 className="text-2xl font-bold text-foreground  mb-2">
                     {reason.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed max-w-md">

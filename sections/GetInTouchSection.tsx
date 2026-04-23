@@ -22,7 +22,7 @@ const GetInTouchSection = () => {
             className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
           />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">
             /Get in Touch
           </span>
         </div>

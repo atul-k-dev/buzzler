@@ -97,7 +97,7 @@ const Navbar = () => {
           {/* Logo */}
           <button
             onClick={() => handleNavClick('#hero')}
-            className="flex-shrink-0 cursor-pointer text-lg font-bold tracking-tight text-foreground flex items-center gap-2 focus:outline-none active:scale-95 transition-all"
+            className="flex-shrink-0 cursor-pointer text-lg font-bold  text-foreground flex items-center gap-2 focus:outline-none active:scale-95 transition-all"
           >
             <img src="/logo.png" alt="logo" width={20} />
             BUZZLER

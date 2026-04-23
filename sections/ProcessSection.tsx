@@ -57,7 +57,7 @@ const ProcessSection = () => {
             className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }}
           />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">
             /HOW WE WORK
           </span>
         </div>
@@ -100,19 +100,19 @@ const ProcessSection = () => {
               {/* Top row: number + tag */}
               <div className="flex items-start justify-between mb-8">
                 <span
-                  className="text-[56px] font-black text-black/20  dark:text-white/20 leading-none tracking-tighter select-none transition-colors duration-300"
+                  className="text-[56px] font-black text-black/20  dark:text-white/20 leading-none er select-none transition-colors duration-300"
                   aria-hidden="true"
                 >
                   {step.number}
                 </span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-foreground border border-primary/60 px-2 py-1 rounded-sm mt-1">
+                <span className="text-[10px]  uppercase tracking-widest text-foreground border border-primary/60 px-2 py-1 rounded-sm mt-1">
                   {step.tag}
                 </span>
               </div>
 
               {/* Content */}
               <div>
-                <h3 className="text-2xl font-bold text-foreground tracking-tight mb-3">
+                <h3 className="text-2xl font-bold text-foreground  mb-3">
                   {step.title}
                 </h3>
                 <p className="text-foreground/50 text-sm leading-relaxed">

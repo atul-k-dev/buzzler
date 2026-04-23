@@ -100,7 +100,7 @@ const FAQSection = () => {
         <div className="w-full h-[1px] bg-border relative">
           <div className="absolute top-0 left-0 w-32 h-[4px] bg-foreground/60"
             style={{ clipPath: 'polygon(0 0, 100% 0, 95% 100%, 0 100%)' }} />
-          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase font-mono">/COMMON QUESTIONS</span>
+          <span className="absolute -top-6 left-0 text-[10px] tracking-widest text-foreground uppercase ">/COMMON QUESTIONS</span>
         </div>
       </motion.div>
 

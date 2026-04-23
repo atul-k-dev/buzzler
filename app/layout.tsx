@@ -32,7 +32,12 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground tracking-tight relative" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Basic&display=swap" rel="stylesheet" />
+      </head>
+      <body className="min-h-full flex flex-col bg-background text-foreground  relative" suppressHydrationWarning>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

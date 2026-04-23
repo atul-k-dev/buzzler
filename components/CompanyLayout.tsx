@@ -47,7 +47,7 @@ export default function CompanyLayout({
           {/* Logo */}
           <Link
             href="/"
-            className="flex items-center justify-end flex-1 gap-2 font-bold tracking-tight text-foreground text-lg"
+            className="flex items-center justify-end flex-1 gap-2 font-bold  text-foreground text-lg"
           >
             BUZZLER
           </Link>
@@ -60,10 +60,10 @@ export default function CompanyLayout({
 
       {/* ── Page hero ── */}
       <section className="pt-40 pb-16 px-4 sm:px-8 max-w-6xl mx-auto relative z-10">
-        <p className="text-[10px] tracking-[0.25em] font-mono text-muted-foreground uppercase mb-4">
+        <p className="text-[10px] tracking-[0.25em]  text-muted-foreground uppercase mb-4">
           {label}
         </p>
-        <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-none mb-5">
+        <h1 className="text-5xl md:text-7xl font-black  leading-none mb-5">
           {title}
         </h1>
         {subtitle && (
@@ -81,7 +81,7 @@ export default function CompanyLayout({
       {/* ── Minimal footer ── */}
       <footer className="relative z-10 border-t border-border mt-16 py-8 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[10px] tracking-[0.2em] font-mono text-muted-foreground">
+          <p className="text-[10px] tracking-[0.2em]  text-muted-foreground">
             © {new Date().getFullYear()} BUZZLER TECHNOLOGIES. ALL RIGHTS RESERVED.
           </p>
           <div className="flex items-center gap-6 text-xs font-medium text-muted-foreground">
