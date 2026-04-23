@@ -72,22 +72,14 @@ const HeroSection = () => {
         }} />
 
         {/* Animated vertical thick glowing beams */}
-        <div className="vertical-glow" style={{ left: '2%', width: '12vw', animationDuration: '32s' }} />
-        <div className="vertical-glow" style={{ left: '15%', width: '18vw', animationDuration: '28s', animationDelay: '-8s' }} />
-        <div className="vertical-glow" style={{ left: '30%', width: '10vw', animationDuration: '24s', animationDelay: '-5s' }} />
-        <div className="vertical-glow" style={{ left: '45%', width: '15vw', animationDuration: '30s', animationDelay: '-15s' }} />
-        <div className="vertical-glow" style={{ left: '55%', width: '20vw', animationDuration: '35s', animationDelay: '-10s' }} />
-        <div className="vertical-glow" style={{ left: '72%', width: '14vw', animationDuration: '26s', animationDelay: '-12s' }} />
-        <div className="vertical-glow" style={{ left: '85%', width: '12vw', animationDuration: '28s', animationDelay: '-3s' }} />
-        <div className="vertical-glow" style={{ left: '94%', width: '16vw', animationDuration: '33s', animationDelay: '-7s' }} />
-
-        {/* Sharp vertical lines */}
-        <div className="bg-line" style={{ left: '12%', animation: 'line-glow 14s ease-in-out infinite 1s' }} />
-        <div className="bg-line" style={{ left: '25%', animation: 'line-glow 8s ease-in-out infinite' }} />
-        <div className="bg-line" style={{ left: '40%', animation: 'line-glow 11s ease-in-out infinite -2s' }} />
-        <div className="bg-line" style={{ left: '65%', animation: 'line-glow 12s ease-in-out infinite 2s' }} />
-        <div className="bg-line" style={{ left: '78%', animation: 'line-glow 9s ease-in-out infinite 4s' }} />
-        <div className="bg-line" style={{ left: '85%', animation: 'line-glow 10s ease-in-out infinite -4s' }} />
+        <div className="vertical-glow hidden md:block" style={{ left: '2%', width: '12vw', animationDuration: '32s' }} />
+        <div className="vertical-glow  md:block" style={{ left: '15%', width: '18vw', animationDuration: '28s', animationDelay: '-8s' }} />
+        <div className="vertical-glow hidden md:block" style={{ left: '30%', width: '10vw', animationDuration: '24s', animationDelay: '-5s' }} />
+        <div className="vertical-glow hidden md:block" style={{ left: '45%', width: '15vw', animationDuration: '30s', animationDelay: '-15s' }} />
+        <div className="vertical-glow hidden md:block" style={{ left: '55%', width: '20vw', animationDuration: '35s', animationDelay: '-10s' }} />
+        <div className="vertical-glow hidden md:block" style={{ left: '72%', width: '14vw', animationDuration: '26s', animationDelay: '-12s' }} />
+        <div className="vertical-glow  md:block" style={{ left: '85%', width: '12vw', animationDuration: '28s', animationDelay: '-3s' }} />
+        <div className="vertical-glow hidden md:block" style={{ left: '94%', width: '16vw', animationDuration: '33s', animationDelay: '-7s' }} />
 
         {/* Bottom blending gradient */}
         <div className="absolute inset-x-0 bottom-0 h-48 sm:h-64 bg-gradient-to-t from-background via-background/50 to-transparent z-10" />

@@ -13,7 +13,7 @@ const GetInTouchSection = () => {
   const [activeType, setActiveType] = useState('Startup');
 
   return (
-    <section className="py-24  max-w-7xl mx-auto relative z-10 text-foreground font-sans">
+    <section className="py-24 max-w-7xl mx-auto relative z-10 text-foreground font-sans overflow-x-hidden">
 
       {/* Top Divider */}
       <div className="max-w-7xl mx-auto px-6 mb-12">
@@ -29,7 +29,7 @@ const GetInTouchSection = () => {
       </div>
 
 
-      <div ref={ref} className="grid lg:grid-cols-2 px-4 sm:px-8 gap-4 lg:gap-4 items-stretch">
+      <div ref={ref} className="grid lg:grid-cols-2 px-4 sm:px-8 gap-4 lg:gap-4 items-stretch overflow-hidden">
 
         {/* Left Column */}
         <motion.div

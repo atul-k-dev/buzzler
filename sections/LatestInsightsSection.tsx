@@ -66,9 +66,8 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
     <a href={post.link} target='_blank' rel='noopener noreferrer'>
       {/* Image */}
       <div
-        className={`relative overflow-hidden rounded-sm mb-5 ${
-          post.featured ? 'aspect-[4/3] lg:aspect-[16/11]' : 'aspect-[4/3]'
-        }`}
+        className={`relative overflow-hidden rounded-sm mb-5 ${post.featured ? 'aspect-[4/3] lg:aspect-[16/11]' : 'aspect-[4/3]'
+          }`}
       >
         <Image
           src={post.image}
@@ -94,16 +93,12 @@ const PostCard = ({ post, i, gridInView }: { post: Post; i: number; gridInView: 
           <span className="w-2 h-2 rounded-full bg-accent inline-block" />
           {post.category}
         </span>
-        <span className="text-[10px] tracking-[0.15em] font-mono text-muted-foreground">
-          {post.date}
-        </span>
       </div>
 
       {/* Title */}
       <h3
-        className={`font-bold leading-snug text-foreground mb-3 group-hover:text-accent transition-colors duration-300 ${
-          post.featured ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'
-        }`}
+        className={`font-bold leading-snug text-foreground mb-3 group-hover:text-accent transition-colors duration-300 ${post.featured ? 'text-2xl md:text-3xl' : 'text-lg md:text-xl'
+          }`}
       >
         {post.title}
       </h3>
@@ -163,7 +158,7 @@ const LatestInsightsSection = () => {
         </div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-4 pr-0 sm:pr-4 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 pr-0 sm:pr-4 lg:px-8">
 
         {/* ── Desktop Grid ──────────────────────── */}
         <div
@@ -178,9 +173,9 @@ const LatestInsightsSection = () => {
         {/* ── Mobile Embla Carousel ────────────────────────── */}
         <div className="lg:hidden" ref={mobileGridRef}>
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-4 pl-1 pr-1">
+            <div className="flex">
               {posts.map((post, i) => (
-                <div key={post.id} className="flex-[0_0_88%] min-w-0 pl-3">
+                <div key={post.id} className="flex-[0_0_93%] min-w-0 pl-4">
                   <PostCard post={post} i={i} gridInView={mobileGridInView} />
                 </div>
               ))}
@@ -188,7 +183,7 @@ const LatestInsightsSection = () => {
           </div>
         </div>
 
-       
+
       </div>
     </section>
   );

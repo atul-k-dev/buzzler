@@ -86,12 +86,12 @@ const Navbar = () => {
       <motion.nav
         animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0 }}
         transition={{ duration: 0.25, ease }}
-        className="fixed top-0 left-0 right-0 z-50 py-4 px-2 sm:px-6 lg:px-8"
+        className="fixed top-0 left-0 right-0 z-50 py-3 px-2 sm:px-6 lg:px-8"
       >
         <div
           className={`max-w-6xl mx-auto flex items-center justify-between h-14 px-3 pl-4 sm:pl-6 sm:px-6 sm:pr-5 rounded-full transition-all duration-300 border ${atTop
             ? 'bg-transparent border-transparent '
-            : 'bg-background/80 backdrop-blur-sm  border-border/80'
+            : 'bg-primary/15 backdrop-blur-sm  border-primary/20'
             }`}
         >
           {/* Logo */}
@@ -125,12 +125,12 @@ const Navbar = () => {
               onClick={scrollToContact}
               className="hidden md:flex items-center gap-2 px-5 py-2 bg-primary hover:bg-primary/90 text-primary-foreground font-medium text-sm rounded-full transition-all active:scale-95 shadow-sm"
             >
-             Let's Start
+              Let's Start
             </button>
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden flex items-center justify-center w-13 h-9 rounded-full bg-surface text-foreground focus:outline-none transition-all hover:bg-surface active:scale-90"
+              className="md:hidden flex items-center justify-center w-13 h-9 rounded-full bg-primary/30 text-foreground focus:outline-none transition-all hover:bg-surface active:scale-90"
               onClick={() => setMobileOpen((prev) => !prev)}
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
             >
