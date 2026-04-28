@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Silk from '../components/Silk';
+import SplitText from '../components/SplitText';
 import { useTheme } from 'next-themes';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -25,18 +26,18 @@ const HeroSection = () => {
   const isLight = mounted && resolvedTheme === 'light';
 
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-[#ffe6e2] md:bg-[#ffcdc6] dark:bg-[#0f0307] transition-colors duration-700">
+    <section className="relative pt-32  pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center bg-[#ffe6e2] md:bg-[#ffcdc6] dark:bg-[#0f0307] transition-colors duration-700">
       {/* Dynamic Background Setup - Silk Component */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none opacity-60  min-w-[700px]">
+      <div className="absolute inset-0 z-0 invert dark:invert-0  overflow-hidden pointer-events-none opacity-100  min-w-[700px]">
         <Silk
           speed={5}
-          scale={1.1}
-          color={isLight ? "#ff737aff" : "#c24d5bff"}
-          noiseIntensity={isLight ? 2.5 : 4.5}
+          scale={1}
+          color={isLight ? "#449c97ff" : "#c24d5bff"}
+          noiseIntensity={isLight ? 2.5 : 1.5}
           rotation={0}
         />
         {/* Bottom blending gradient */}
-        <div className="absolute inset-x-0 bottom-0 h-48 sm:h-64 bg-gradient-to-t from-background via-background/50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-48 sm:h-84 bg-gradient-to-t from-black via-black/70 to-transparent z-40 pointer-events-none" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
@@ -61,21 +62,18 @@ const HeroSection = () => {
             className="text-[2.5rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[4.2rem] font-black text-[#202020] dark:text-[rgba(255,255,255,0.9)] leading-[1.05] mb-6 max-w-5xl custom-headline transition-colors duration-500"
           >
 
-            We build  <span className="inline-grid align-bottom max-w-[185px]  min-w-[185px] lg:max-w-[340px] lg:min-w-[340px] " style={{ perspective: '1000px' }}>
-              <AnimatePresence>
-                <motion.span
-                  key={wordIndex}
-                  initial={{ opacity: 0, y: "80%", rotateX: -90, scale: 0.9 }}
-                  animate={{ opacity: 1, y: "0%", rotateX: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: "-80%", rotateX: 90, scale: 0.9 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                  className="col-start-1 row-start-1 origin-center bg-primary/90 text-accent pl-2 rounded-md"
-                  style={{ transformStyle: 'preserve-3d' }}
-
-                >
-                  {ROTATING_WORDS[wordIndex]}
-                </motion.span>
-              </AnimatePresence>
+            We build  <span className="inline-grid align-bottom max-w-[195px]  min-w-[195px] lg:max-w-[340px] lg:min-w-[340px] " style={{ perspective: '1000px' }}>
+              <SplitText
+                key={wordIndex}
+                text={ROTATING_WORDS[wordIndex]}
+                className="col-start-1 row-start-1 bg-primary/90 text-accent pl-2 pr-2 rounded-md"
+                delay={50}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+              />
             </span>
             <br />founders stop worrying about.
 

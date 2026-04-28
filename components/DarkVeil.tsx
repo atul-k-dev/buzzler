@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useEffect } from 'react';
-import { Renderer, Program, Mesh, Triangle, Vec2 } from 'ogl';
+import { Renderer, Program, Mesh, Triangle, Vec2, Vec3 } from 'ogl';
 
 const vertex = `
 attribute vec2 position;
@@ -18,6 +18,9 @@ uniform float uNoise;
 uniform float uScan;
 uniform float uScanFreq;
 uniform float uWarp;
+uniform float uIsLight;
+uniform vec3 uColor;
+uniform float uUseColor;
 #define iTime uTime
 #define iResolution uResolution
 
@@ -70,6 +73,21 @@ void main(){
     float scanline_val=sin(gl_FragCoord.y*uScanFreq)*0.5+0.5;
     col.rgb*=1.-(scanline_val*scanline_val)*uScan;
     col.rgb+=(rand(gl_FragCoord.xy+uTime)-0.5)*uNoise;
+    
+    if (uUseColor > 0.5) {
+        float lum = dot(col.rgb, vec3(0.299, 0.587, 0.114));
+        if (uIsLight > 0.5) {
+            lum = 1.0 - lum;
+            col.rgb = mix(vec3(1.0), uColor, (1.0 - lum) * 1.5);
+        } else {
+            col.rgb = mix(vec3(0.0), uColor, lum * 1.5);
+        }
+    } else {
+        if (uIsLight > 0.5) {
+            col.rgb = 1.0 - col.rgb;
+        }
+    }
+    
     gl_FragColor=vec4(clamp(col.rgb,0.0,1.0),1.0);
 }
 `;
@@ -82,6 +100,18 @@ type Props = {
   scanlineFrequency?: number;
   warpAmount?: number;
   resolutionScale?: number;
+  isLight?: boolean;
+  color?: string;
+};
+
+// Helper to convert hex to RGB
+const hexToRgb = (hex: string) => {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})?$/i.exec(hex);
+  return result ? [
+    parseInt(result[1], 16) / 255,
+    parseInt(result[2], 16) / 255,
+    parseInt(result[3], 16) / 255
+  ] : [0, 0, 0];
 };
 
 export default function DarkVeil({
@@ -91,7 +121,9 @@ export default function DarkVeil({
   speed = 0.5,
   scanlineFrequency = 0,
   warpAmount = 0,
-  resolutionScale = 1
+  resolutionScale = 1,
+  isLight = false,
+  color
 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
@@ -116,7 +148,10 @@ export default function DarkVeil({
         uNoise: { value: noiseIntensity },
         uScan: { value: scanlineIntensity },
         uScanFreq: { value: scanlineFrequency },
-        uWarp: { value: warpAmount }
+        uWarp: { value: warpAmount },
+        uIsLight: { value: isLight ? 1.0 : 0.0 },
+        uColor: { value: new Vec3(...hexToRgb(color || '#000000')) },
+        uUseColor: { value: color ? 1.0 : 0.0 }
       }
     });
 
@@ -142,6 +177,12 @@ export default function DarkVeil({
       program.uniforms.uScan.value = scanlineIntensity;
       program.uniforms.uScanFreq.value = scanlineFrequency;
       program.uniforms.uWarp.value = warpAmount;
+      program.uniforms.uIsLight.value = isLight ? 1.0 : 0.0;
+      program.uniforms.uUseColor.value = color ? 1.0 : 0.0;
+      if (color) {
+        const rgb = hexToRgb(color);
+        program.uniforms.uColor.value.set(rgb[0], rgb[1], rgb[2]);
+      }
       renderer.render({ scene: mesh });
       frame = requestAnimationFrame(loop);
     };
@@ -152,6 +193,6 @@ export default function DarkVeil({
       cancelAnimationFrame(frame);
       window.removeEventListener('resize', resize);
     };
-  }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale]);
+  }, [hueShift, noiseIntensity, scanlineIntensity, speed, scanlineFrequency, warpAmount, resolutionScale, isLight, color]);
   return <canvas ref={ref} className="w-full h-full block" />;
 }

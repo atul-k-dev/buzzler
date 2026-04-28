@@ -90,7 +90,7 @@ const Navbar = () => {
       >
         <div
           className={`max-w-6xl mx-auto flex items-center justify-between h-14 px-3 pl-4 sm:pl-6 sm:px-6 sm:pr-5 rounded-full transition-all duration-300 border ${atTop
-            ? 'bg-transparent border-transparent '
+            ? 'bg-transparent border-transparent max-w-7xl'
             : 'bg-primary/15 backdrop-blur-sm  border-primary/20'
             }`}
         >
