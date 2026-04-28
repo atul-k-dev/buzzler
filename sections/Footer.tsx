@@ -49,13 +49,13 @@ const Footer = () => {
 
           >
             <h2 className="text-4xl md:text-5xl font-semibold  mb-4 max-w-2xl leading-[1.1]">
-              Your next product doesn&apos;t have a launch date yet. Let&apos;s fix that.
+              Your next product doesn&apos;t have a launch date yet. 
             </h2>
             <p className="text-muted-foreground text-lg mb-10 max-w-lg leading-relaxed font-medium">
-              Most of our projects kick off within 2 weeks of first contact.
+              Let&apos;s fix that. Most of our projects kick off within 2 weeks.
             </p>
             <Link href="/contact" className="group inline-flex items-center bg-accent text-black pl-6 pr-2 py-2 rounded-full font-bold text-lg hover:bg-[#96db00] transition-all transform active:scale-95">
-              <span>Get a Written Scope Estimate</span>
+              <span>Get a Estimate</span>
               <div className="ml-6 bg-black p-2 rounded-full group-hover:rotate-45 transition-transform duration-300">
                 <ArrowUpRight className="w-5 h-5 text-accent" />
               </div>

@@ -48,7 +48,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: -16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.1 }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border  bg-primary/20 border-primary/20  mb-8 transition-colors duration-500"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border  bg-primary/20 border-primary/20 mb-5  sm:mb-8 transition-colors duration-500"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             <span className="text-xs font-medium text-primary tracking-wide mt-0.5">50 products shipped since 2023.</span>
@@ -59,7 +59,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease, delay: 0.22 }}
-            className="text-[3rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-bold text-[#202020] dark:text-[rgba(255,255,255,0.9)] leading-[1.05] mb-6 max-w-7xl custom-headline transition-colors duration-500"
+            className="text-[3.13rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-bold text-[#202020] dark:text-[rgba(255,255,255,0.9)] leading-[1.05] mb-6 max-w-7xl custom-headline transition-colors duration-500"
           >
 
             We build  <span className="inline-grid align-bottom max-w-[225px]  min-w-[225px] lg:max-w-[440px] lg:min-w-[440px] " style={{ perspective: '1000px' }}>
@@ -86,7 +86,7 @@ const HeroSection = () => {
             transition={{ duration: 0.65, ease, delay: 0.36 }}
             className="text-[17px] text-left sm:text-center sm:text-2xl text-foreground/80 mb-6 max-w-2xl transition-colors duration-500"
           >
-            For founders who’ve been burned by agencies that over-promise and disappear. We scope honestly, ship on schedule, and stay accountable after launch.
+            For founders who’ve been burned by agencies that over-promise and disappear. We scope honestly, ship on schedule.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -94,13 +94,13 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.48 }}
-            className="flex w-full flex-col lg:flex-row gap-4 lg:items-center justify-center mt-6"
+            className="flex w-full flex-row gap-4  justify-center mt-6 sm:mt-10"
           >
-            <button className="h-13 px-6 sm:px-8 rounded-full border border-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
-              See 3 Products We’ve Shipped →
+            <button className="h-13 px-6 sm:px-8 w-full sm:w-fit rounded-full border border-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
+              About Us
             </button>
-            <button className="relative h-13 px-6 sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 font-semibold text-base transition-all duration-300 overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
-              Book a 30-min Strategy Call
+            <button className="relative h-13 px-6 w-full sm:w-fit sm:px-8 rounded-full text-primary-foreground bg-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 font-semibold text-base transition-all duration-300 overflow-hidden group focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
+              Book a Call
             </button>
           </motion.div>
 
@@ -109,7 +109,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease, delay: 0.65 }}
-            className="mt-32 flex flex-col items-center"
+            className="mt-18 sm:mt-32 flex flex-col items-center"
           >
             <p className=" px-14 lg:px-0 text-xs uppercase tracking-widest text-foreground mb-8 font-medium transition-colors duration-500">
               Our Other Servises:

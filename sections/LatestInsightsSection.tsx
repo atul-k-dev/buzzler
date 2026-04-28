@@ -158,11 +158,11 @@ const LatestInsightsSection = () => {
         </div>
       </motion.div>
 
-      <div className="max-w-7xl mx-auto px-3 pr-0 sm:pr-4 lg:px-8">
+      <div className="max-w-7xl mx-auto  px-0 sm:pr-4 lg:px-8">
 
         {/* Section Header */}
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between items-start mb-16 gap-6 px-3">
           <h2 className="text-5xl font-semibold max-w-xl text-foreground leading-[1.05]">
             We don&apos;t just build for clients.
           </h2>
@@ -186,7 +186,7 @@ const LatestInsightsSection = () => {
           <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
               {posts.map((post, i) => (
-                <div key={post.id} className="flex-[0_0_93%] min-w-0 pl-4">
+                <div key={post.id} className="flex-[0_0_93%] min-w-0 pl-3">
                   <PostCard post={post} i={i} gridInView={mobileGridInView} />
                 </div>
               ))}

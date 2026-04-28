@@ -11,28 +11,7 @@ const stats = [
   { value: '3 ', label: 'yrs Avg. Client Relationship' },
 ];
 
-const reasons = [
-  {
-    icon: Layers,
-    title: 'Architecture that grows with you',
-    desc: 'We architect for growth from day one. When your user base 10x’s, your codebase won’t need a rewrite.',
-  },
-  {
-    icon: Zap,
-    title: 'Transparent Pricing. No Surprises.',
-    desc: 'Flat-rate project pricing with clear milestones. You know the cost before you commit.',
-  },
-  {
-    icon: Shield,
-    title: 'Security Baked In, Not Bolted On',
-    desc: 'Auth, encryption, and infrastructure hardening are part of our default build — not an add-on.',
-  },
-  {
-    icon: Globe2,
-    title: 'One Team, Full Stack',
-    desc: 'Design, frontend, backend, DevOps. You deal with one team, one point of contact, zero hand-off gaps.',
-  },
-];
+
 
 const containerVariants = {
   hidden: {},
@@ -110,32 +89,152 @@ const WhyUsSection = () => {
           ref={cardsRef}
           variants={containerVariants}
           initial="hidden"
-          animate={cardsInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          animate={cardsInView ? 'visible' : 'hidden' }      
+          className="flex flex-col lg:flex-row gap-4 mt-4"
         >
-          {reasons.map((reason) => {
-            const Icon = reason.icon;
-            return (
-              <motion.div
-                key={reason.title}
-                variants={itemVariants}
-                className="bg-surface relative rounded-lg p-6 group overflow-hidden flex flex-col gap-5 border border-transparent transition-all duration-300 hover:border-foreground/10 hover:-translate-y-1 active:scale-[0.99] cursor-pointer"
-              >
-                <div className=' absolute top-19 -rotate-20 right-0 scale-[4] opacity-[0.07] group-hover:opacity-[0.3] transition-colors duration-300'><Icon className="w-15 h-15 text-foreground" strokeWidth={2} /></div>
-                <div className="w-10 h-10 bg-foreground/5 border border-border rounded-sm flex items-center justify-center group-hover:bg-foreground/10 transition-colors duration-300">
-                  <Icon className="w-7 h-7 text-foreground/70" strokeWidth={1.5} />
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground  mb-2">
-                    {reason.title}
+          {/* Column 1: Assign tasks with ease (Left Tall) */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            className="bg-surface lg:w-1/3 relative rounded-xl p-5 flex flex-col justify-between border border-white/[0.03] shadow-2xl overflow-hidden"
+          >
+            <div className="z-20">
+              <h3 className="text-xl font-bold text-foreground mb-4 leading-tight">
+                Assign tasks with ease
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed pr-4">
+                Delegate work to the right people in just a few clicks, keeping projects structured, accountable, and moving forward.
+              </p>
+            </div>
+            
+            <div className="flex-1 flex flex-col justify-end mt-4 relative z-10 w-full">
+              <div className="flex flex-col gap-3 w-full mb-4 mx-auto">
+                 {/* Row 1 */}
+                 <div className="grid grid-cols-3 w-full gap-3 justify-start">
+                   <div className="w-full h-full rounded-xl bg-gray-200 overflow-hidden relative shadow-lg">
+                     <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?w=200&h=200&fit=crop" alt="avatar" className="w-full h-full object-cover grayscale opacity-90" />
+                   </div>
+                   <div className="w-full h-full rounded-lg bg-primary/20 border border-border"></div>
+                   <div className="w-full h-full rounded-lg bg-primary/20 border border-border"></div>
+                 </div>
+                
+                 {/* Row 3 */}
+                 <div className="grid grid-cols-3 w-full gap-3 justify-start">
+                   <div className="w-full h-full rounded-lg bg-primary/20 border border-border"></div>
+                   <div className="w-full h-full rounded-xl bg-gray-200 overflow-hidden relative shadow-lg">
+                     <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop" alt="avatar" className="w-full h-full object-cover grayscale opacity-90" />
+                   </div>
+                   <div className="w-full h-full rounded-lg bg-primary/20 border border-border"></div>
+                 </div>
+              </div>
+
+              <div className="flex items-center justify-between mt-auto">
+                <span className="text-sm font-medium text-foreground">Marketing Members</span>
+                <span className="text-xs font-semibold text-foreground bg-primary/10 px-5 py-2.5 rounded-full">UI/UX Designers</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Column 2: Middle Stack */}
+          <div className="flex flex-col gap-5 lg:w-1/3">
+            {/* Card 2: Boost Efficiency (Middle Top) */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              className="bg-surface h-1/2 relative rounded-xl p-5 flex flex-col  justify-between border border-white/[0.03] overflow-hidden"
+            >
+              <div className="flex-1 flex items-center justify-center max-h-[100px]  relative">
+
+                 {/* Rocket */}
+                 <motion.div 
+                   className="relative z-10 w-28 h-28 rotate-45"
+                 >
+                   <img src="https://em-content.zobj.net/source/apple/354/rocket_1f680.png" alt="rocket" className="w-full h-full object-contain " />
+                 </motion.div>
+              </div>
+              <div className="z-20 ">
+                <h3 className="text-xl font-bold text-foreground mb-2">
+                  Boost Efficiency
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Help your team achieve greater efficiency with tools that support focus, reduce bottlenecks, and encourage smoother collaboration.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 3: Task Tracking (Middle Bottom) */}
+            <motion.div
+              variants={itemVariants}
+              whileHover={{ scale: 1.01 }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+              className="bg-surface h-1/2 relative rounded-xl p-5 flex flex-col justify-between border border-white/[0.03] shadow-2xl overflow-hidden"
+            >
+              <div className="flex flex-col gap-3 ">
+                 {/* Checked Task */}
+                 <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3 cursor-pointer">
+                   <div className="w-[20px] h-[20px] rounded-[6px] bg-foreground flex items-center justify-center shrink-0">
+                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 3L4.5 8.5L2 6" stroke="#121212" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                   </div>
+                   <span className="text-foreground text-sm font-medium line-through decoration-foreground decoration-[2px]">Present a bug as a feature</span>
+                 </motion.div>
+                 {/* Unchecked Task */}
+                 <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3 cursor-pointer">
+                   <div className="w-[20px] h-[20px] rounded-[6px] bg-[#2a2a2a] border-[2px] border-[#444] flex items-center justify-center shrink-0"></div>
+                   <span className="text-foreground text-sm font-medium">Find bug from landing page</span>
+                 </motion.div>
+                 {/* Faded Task */}
+                 <motion.div whileHover={{ x: 5 }} className="flex items-center gap-3 cursor-pointer">
+                   <div className="w-[20px] h-[20px] rounded-[6px] bg-[#1a1a1a] border-[2px] border-[#333] flex items-center justify-center shrink-0"></div>
+                   <span className="text-foreground text-sm font-medium">Present a bug as a feature</span>
+                 </motion.div>
+              </div>
+              
+              <div className="mt-3 z-20">
+                <div className="inline-block mb-2">
+                  <h3 className="text-xl font-bold text-foreground tracking-tight leading-none">
+                    Task Tracking
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed max-w-md">
-                    {reason.desc}
-                  </p>
                 </div>
-              </motion.div>
-            );
-          })}
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Maintain accurate accounting of tasks, ensuring visibility into progress and completion history across the team.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Column 3: Global Schedule (Right Tall) */}
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ scale: 1.01 }}
+            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            className="bg-surface lg:w-1/3 flex-1 relative rounded-xl p-5 flex flex-col justify-between border border-white/[0.03] shadow-2xl overflow-hidden"
+          >
+            <div className="z-20">
+              <h3 className="text-xl font-bold text-foreground mb-2 leading-tight">
+                Global Schedule
+              </h3>
+              <p className="text-muted-foreground text-sm leading-relaxed pr-4">
+                Collaborate seamlessly across time zones with built-in scheduling that keeps deadlines aligned for global teammates.
+              </p>
+            </div>
+            
+            <div className="absolute -bottom-20 -right-[45%] w-[120%] aspect-square z-10 pointer-events-none flex items-center justify-center overflow-hidden">
+               {/* 3D Glowing Globe */}
+               <motion.div 
+                 animate={{ rotate: 360 }}
+                 transition={{ duration: 120, repeat: Infinity, ease: "linear" }}
+                 className="w-[100%] h-[100%] rounded-full relative overflow-hidden" 
+                 style={{ background: 'radial-gradient(circle at 35% 35%, #ffffff 0%, #d4d4d4 25%, #737373 60%, #171717 100%)' }}
+               >
+                 {/* Dotted pattern overlay */}
+                 <div className="absolute inset-0 opacity-70" style={{ backgroundImage: 'radial-gradient(#000000 2.5px, transparent 2.5px)', backgroundSize: '18px 18px', backgroundPosition: 'center' }}></div>
+                 
+                 
+               </motion.div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
