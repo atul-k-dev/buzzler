@@ -15,17 +15,17 @@ export default function Home() {
       <Navbar />
       
       <main>
-        <div id="hero" data-scroll data-scroll-speed="0"><HeroSection /></div>
-        <div id="services" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><ServicesSection /></div>
-        <div id="process" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><ProcessSection /></div>
-        <div id="why-us" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><WhyUsSection /></div>
-        <div id="blog" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><LatestInsightsSection /></div>
-        <div id="clients" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><TestimonialsSection /></div>
-        <div id="faq" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><FAQSection /></div>
-        <div id="contact" className="relative z-10 bg-background" data-scroll data-scroll-speed="0.05"><GetInTouchSection /></div>
+        <div id="hero" data-scroll data-scroll-speed="0" className="relative z-10 bg-background"><HeroSection /></div>
+        <div id="services" className="relative z-10 " data-scroll data-scroll-speed="0.05"><ServicesSection /></div>
+        <div id="process" className="relative z-10 " data-scroll data-scroll-speed="0.05"><ProcessSection /></div>
+        <div id="why-us" className="relative z-10 " data-scroll data-scroll-speed="0.05"><WhyUsSection /></div>
+        <div id="blog" className="relative z-10 " data-scroll data-scroll-speed="0.05"><LatestInsightsSection /></div>
+        <div id="clients" className="relative z-10 " data-scroll data-scroll-speed="0.05"><TestimonialsSection /></div>
+        <div id="faq" className="relative z-10 " data-scroll data-scroll-speed="0.05"><FAQSection /></div>
+        <div id="contact" className="relative z-10 " data-scroll data-scroll-speed="0.05"><GetInTouchSection /></div>
       </main>
 
-      <div className="relative z-0 bg-background" data-scroll><Footer /></div>
+      <div className="relative z-10 " data-scroll><Footer /></div>
     </div>
   );
 }

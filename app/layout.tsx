@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 import { ThemeProvider } from "@/components/theme-provider";
 import SmoothScroll from "@/components/SmoothScroll";
 import CustomCursor from "@/components/CustomCursor";
+import GlobalBackground from "@/components/GlobalBackground";
 
 export const metadata: Metadata = {
   title: "Buzzler Technologies — Software Development Agency",
@@ -45,17 +46,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SmoothScroll>
-            {/* Global Noise Overlay */}
-            <div
-              className="fixed inset-0 z-[1] pointer-events-none opacity-[0.4] mix-blend-overlay"
-              style={{
-                backgroundImage: "url('/img/bgEffect.png')",
-                backgroundRepeat: "repeat",
-                backgroundSize: "150px"
-              }}
-            />
             <CustomCursor />
             {children}
+            <GlobalBackground />
           </SmoothScroll>
         </ThemeProvider>
       </body>

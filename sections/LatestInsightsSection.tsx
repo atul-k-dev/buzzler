@@ -137,7 +137,7 @@ const LatestInsightsSection = () => {
     <section
       ref={sectionRef}
       id="blog"
-      className="relative py-20 lg:py-28 bg-background overflow-hidden z-[1]"
+      className="relative py-20 lg:py-28  overflow-hidden z-[1]"
     >
       {/* Top Divider */}
       <motion.div
