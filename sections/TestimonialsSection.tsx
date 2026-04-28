@@ -131,13 +131,9 @@ const TestimonialsSection = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={marqueeInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.7, ease, delay: 0.2 }}
-        className="relative w-full overflow-hidden hidden lg:block"
+        className="relative w-full overflow-hidden hidden lg:block sm:border-x border-primary/50 border-dashed sm:py-2"
       >
-        {/* Left fade overlay */}
-        <div className="absolute left-0 top-0 bottom-0 w-18 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
-        {/* Right fade overlay */}
-        <div className="absolute right-0 top-0 bottom-0 w-18 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
-
+        
         {/* 
           Inner marquee track: uses CSS animation instead of Framer Motion animate
           to avoid any conflict with the parent's animate prop.

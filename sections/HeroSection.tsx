@@ -59,10 +59,10 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease, delay: 0.22 }}
-            className="text-[2.5rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[4.2rem] font-black text-[#202020] dark:text-[rgba(255,255,255,0.9)] leading-[1.05] mb-6 max-w-5xl custom-headline transition-colors duration-500"
+            className="text-[3rem] text-left w-full sm:text-center sm:text-6xl md:text-7xl lg:text-[6rem] font-bold text-[#202020] dark:text-[rgba(255,255,255,0.9)] leading-[1.05] mb-6 max-w-7xl custom-headline transition-colors duration-500"
           >
 
-            We build  <span className="inline-grid align-bottom max-w-[195px]  min-w-[195px] lg:max-w-[340px] lg:min-w-[340px] " style={{ perspective: '1000px' }}>
+            We build  <span className="inline-grid align-bottom max-w-[225px]  min-w-[225px] lg:max-w-[440px] lg:min-w-[440px] " style={{ perspective: '1000px' }}>
               <SplitText
                 key={wordIndex}
                 text={ROTATING_WORDS[wordIndex]}
@@ -75,7 +75,7 @@ const HeroSection = () => {
                 to={{ opacity: 1, y: 0 }}
               />
             </span>
-            <br />founders stop worrying about.
+            <br />founders stop worrying.
 
           </motion.h1>
 
@@ -84,7 +84,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, ease, delay: 0.36 }}
-            className="text-[17px] text-left sm:text-center sm:text-2xl text-foreground/70 mb-10 max-w-2xl transition-colors duration-500"
+            className="text-[17px] text-left sm:text-center sm:text-2xl text-foreground/80 mb-6 max-w-2xl transition-colors duration-500"
           >
             For founders who’ve been burned by agencies that over-promise and disappear. We scope honestly, ship on schedule, and stay accountable after launch.
           </motion.p>
@@ -94,7 +94,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease, delay: 0.48 }}
-            className="flex w-full flex-col lg:flex-row gap-4 lg:items-center justify-center mt-10"
+            className="flex w-full flex-col lg:flex-row gap-4 lg:items-center justify-center mt-6"
           >
             <button className="h-13 px-6 sm:px-8 rounded-full border border-primary hover:bg-accent hover:-translate-y-0.5 active:scale-95 text-foreground font-semibold text-base transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 cursor-pointer">
               See 3 Products We’ve Shipped →

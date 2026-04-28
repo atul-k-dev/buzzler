@@ -5,6 +5,7 @@
 
 @theme {
   --font-sans: "Chiron GoRound TC", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-background: var(--background);
@@ -57,6 +58,14 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: "Chiron GoRound TC", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Playfair Display", serif;
+}
+
+h3, h4, h5, h6 {
   font-family: "Chiron GoRound TC", sans-serif;
 }
 
